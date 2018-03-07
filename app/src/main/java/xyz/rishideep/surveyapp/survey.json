@@ -1,0 +1,44 @@
+{
+  "survey": {
+    "q01": {
+      "que": "1. Name of the student",
+      "ans": ""
+    },
+    "q02": {
+      "que": "2. Age of the student",
+      "ans": ""
+    },
+    "q03": {
+      "que": "3. Gender",
+      "ans": ""
+    },
+    "q04": {
+      "que": "4. Caste",
+      "ans": ""
+    },
+    "q05": {
+      "que": "5. Current education  / Education received",
+      "ans": ""
+    },
+    "q06": {
+      "que": "6. Place of the school",
+      "ans": ""
+    },
+    "q07": {
+      "que": "7. No of other school going children in the Family",
+      "ans": ""
+    },
+    "q08": {
+      "que": "8. Are there any school dropout in the family? (children)",
+      "ans": ""
+    },
+    "q09": {
+      "que": "9. Educational status of the parents",
+      "ans": ""
+    },
+    "q10": {
+      "que": "10. Occupation and income of the parents & family members",
+      "ans": ""
+    }
+  }
+}

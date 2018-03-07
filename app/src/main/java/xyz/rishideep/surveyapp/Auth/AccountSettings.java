@@ -1,25 +1,31 @@
-package xyz.rishideep.surveyapp;
+package xyz.rishideep.surveyapp.Auth;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import xyz.rishideep.surveyapp.R;
+
 public class AccountSettings extends AppCompatActivity {
 
     private Button changeEmail, changePassword, sendEmail, remove;
     private EditText oldEmail, newEmail, password, newPassword;
+    private CoordinatorLayout coordinatorLayout;
     private ProgressBar progressBar;
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
@@ -38,17 +44,20 @@ public class AccountSettings extends AppCompatActivity {
 
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user == null) {
                     startActivity(new Intent(AccountSettings.this, LoginActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     finish();
                 }
             }
         };
 
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
         Button btnChangeEmail = findViewById(R.id.change_email_button);
         Button btnChangePassword = findViewById(R.id.change_password_button);
         Button btnSendResetEmail = findViewById(R.id.sending_pass_reset_button);
@@ -103,11 +112,11 @@ public class AccountSettings extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(AccountSettings.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
+                                        Snackbar.make(coordinatorLayout, "Email address is updated. Please sign in with new email id!", Snackbar.LENGTH_LONG).show();
                                         signOut();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(AccountSettings.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+                                        Snackbar.make(coordinatorLayout, "Failed to update email!", Snackbar.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -115,6 +124,18 @@ public class AccountSettings extends AppCompatActivity {
                 } else if (newEmail.getText().toString().trim().equals("")) {
                     newEmail.setError("Enter email");
                     progressBar.setVisibility(View.GONE);
+                }
+
+                try {
+                    InputMethodManager inputManager = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                    if (inputManager != null) {
+                        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                                InputMethodManager.HIDE_NOT_ALWAYS);
+                    }
+                } catch (Exception ignored) {
+
                 }
             }
         });
@@ -147,11 +168,11 @@ public class AccountSettings extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(AccountSettings.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
+                                            Snackbar.make(coordinatorLayout, "Password is updated, sign in with new password!", Snackbar.LENGTH_LONG).show();
                                             signOut();
                                             progressBar.setVisibility(View.GONE);
                                         } else {
-                                            Toast.makeText(AccountSettings.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                            Snackbar.make(coordinatorLayout, "Failed to update password!", Snackbar.LENGTH_LONG).show();
                                             progressBar.setVisibility(View.GONE);
                                         }
                                     }
@@ -160,6 +181,18 @@ public class AccountSettings extends AppCompatActivity {
                 } else if (newPassword.getText().toString().trim().equals("")) {
                     newPassword.setError("Enter password");
                     progressBar.setVisibility(View.GONE);
+                }
+
+                try {
+                    InputMethodManager inputManager = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                    if (inputManager != null) {
+                        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                                InputMethodManager.HIDE_NOT_ALWAYS);
+                    }
+                } catch (Exception ignored) {
+
                 }
             }
         });
@@ -188,10 +221,10 @@ public class AccountSettings extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(AccountSettings.this, "Reset password email is sent!", Toast.LENGTH_SHORT).show();
+                                        Snackbar.make(coordinatorLayout, "Reset password email is sent!", Snackbar.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(AccountSettings.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                        Snackbar.make(coordinatorLayout, "Failed to send reset email!", Snackbar.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -199,6 +232,18 @@ public class AccountSettings extends AppCompatActivity {
                 } else {
                     oldEmail.setError("Enter email");
                     progressBar.setVisibility(View.GONE);
+                }
+
+                try {
+                    InputMethodManager inputManager = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                    if (inputManager != null) {
+                        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                                InputMethodManager.HIDE_NOT_ALWAYS);
+                    }
+                } catch (Exception ignored) {
+
                 }
             }
         });
@@ -213,12 +258,13 @@ public class AccountSettings extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(AccountSettings.this, "Your profile is deleted :( Create a account now!", Toast.LENGTH_SHORT).show();
+                                        Snackbar.make(coordinatorLayout, "Your profile is deleted :( Create a account now!", Snackbar.LENGTH_LONG).show();
                                         startActivity(new Intent(AccountSettings.this, SignupActivity.class));
+                                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                                         finish();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(AccountSettings.this, "Failed to delete your account!", Toast.LENGTH_SHORT).show();
+                                        Snackbar.make(coordinatorLayout, "Failed to delete your account!", Snackbar.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -263,6 +309,7 @@ public class AccountSettings extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
 
         return super.onOptionsItemSelected(item);

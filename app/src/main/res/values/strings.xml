@@ -32,4 +32,7 @@
     <string name="prompt_password">Password Hint</string>
     <string name="answer">Your answer</string>
     <string name="ok">OK</string>
+    <string name="rishideep">_rishideep_</string>
+    <string name="clear">Clear</string>
+    <string name="edit">Edit</string>
 </resources>

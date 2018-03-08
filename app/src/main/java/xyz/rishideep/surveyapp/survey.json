@@ -1,44 +1,37 @@
 {
-  "survey": {
+  "surveyQuestions": {
     "q01": {
-      "que": "1. Name of the student",
-      "ans": ""
+      "que": "1. Name of the student"
     },
     "q02": {
-      "que": "2. Age of the student",
-      "ans": ""
+      "que": "2. Age of the student"
     },
     "q03": {
-      "que": "3. Gender",
-      "ans": ""
+      "que": "3. Gender"
     },
     "q04": {
-      "que": "4. Caste",
-      "ans": ""
+      "que": "4. Caste"
     },
     "q05": {
-      "que": "5. Current education  / Education received",
-      "ans": ""
+      "que": "5. Current education  / Education received"
     },
     "q06": {
-      "que": "6. Place of the school",
-      "ans": ""
+      "que": "6. Place of the school"
     },
     "q07": {
-      "que": "7. No of other school going children in the Family",
-      "ans": ""
+      "que": "7. No of other school going children in the Family"
     },
     "q08": {
-      "que": "8. Are there any school dropout in the family? (children)",
-      "ans": ""
+      "que": "8. Are there any school dropout in the family? (children)"
     },
     "q09": {
-      "que": "9. Educational status of the parents",
-      "ans": ""
+      "que": "9. Educational status of the parents"
     },
     "q10": {
-      "que": "10. Occupation and income of the parents & family members",
-      "ans": ""
+      "que": "10. Occupation and income of the parents & family members"
     }
+  },
+  "surveyAnswers": {
+
   }
 }

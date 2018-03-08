@@ -5,6 +5,7 @@
     <item
         android:id="@+id/account_settings"
         android:orderInCategory="100"
+        android:icon="@drawable/ic_settings_black_24dp"
         android:title="@string/account_settings"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 </menu>

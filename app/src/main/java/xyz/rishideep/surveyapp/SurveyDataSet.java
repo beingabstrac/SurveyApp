@@ -5,9 +5,13 @@ package xyz.rishideep.surveyapp;
  */
 
 public class SurveyDataSet {
-    private String que, ans;
+    public String que, ans;
 
-    String getQue() {
+    public SurveyDataSet() {
+
+    }
+
+    public String getQue() {
         return que;
     }
 

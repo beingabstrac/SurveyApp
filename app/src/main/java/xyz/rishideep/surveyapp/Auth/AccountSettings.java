@@ -41,10 +41,7 @@ public class AccountSettings extends AppCompatActivity {
         }
 
         auth = FirebaseAuth.getInstance();
-
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

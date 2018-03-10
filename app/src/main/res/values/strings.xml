@@ -42,47 +42,48 @@
 
     <string name="i_socio_economic_status">I. SOCIO ECONOMIC STATUS</string>
 
-    <string name="question1">1. Name of the student</string>
+    <string name="question1">01. Name of the student</string>
 
-    <string name="question2">2. Age of the student</string>
+    <string name="question2">02. Age of the student</string>
 
-    <string name="question3">3. Gender</string>
+    <string name="question3">03. Gender</string>
     <string name="question3_rd1">Male</string>
     <string name="question3_rd2">Female</string>
     <string name="question3_rd3">Transgender</string>
 
-    <string name="question4">4. Caste</string>
+    <string name="question4">04. Caste</string>
     <string name="question4_rd1">OC</string>
     <string name="question4_rd2">BC</string>
     <string name="question4_rd3">MBC</string>
     <string name="question4_rd4">SC</string>
     <string name="question4_rd5">ST</string>
 
-    <string name="question5">5. Current education / Education received</string>
+    <string name="question5">05. Current education / Education received</string>
 
-    <string name="question6">6. Place of the school</string>
+    <string name="question6">06. Place of the school</string>
 
-    <string name="question7">7. No of other school going children in the Family</string>
+    <string name="question7">07. No of other school going children in the Family</string>
     <string name="child_1">Child 1</string>
     <string name="child_2">Child 2</string>
     <string name="child_3">Child 3</string>
     <string name="others">Others</string>
     <string name="age">Age</string>
 
-    <string name="question8">8. Are there any school dropout in the family? (children)</string>
+    <string name="question8">08. Are there any school dropout in the family? (children)</string>
     <string name="question8_rd1">Yes</string>
     <string name="question8_rd2">No</string>
     <string name="question8_2">If yes,</string>
     <string name="male">Male (nos.)</string>
     <string name="female">Female (nos.)</string>
 
-    <string name="question9">9. Educational status of the parents</string>
+    <string name="question9">09. Educational status of the parents</string>
     <string name="motherName">Mother Name</string>
     <string name="fatherName">Father Name</string>
     <string name="gaurdianName">Guardian Name</string>
     <string name="edStatus">Educational Status</string>
 
-    <string name="question10">10. Occupation and income of the parents &amp; family members</string>
+    <string name="question10">10. Occupation and income of the parents and family members</string>
+    <string name="question10note">(If employment is daily wage, ask for no. of days of work per week and then calculate monthly income)</string>
     <string name="father">FATHER :</string>
     <string name="mother">MOTHER :</string>
     <string name="person1">PERSON - 1 :</string>
@@ -98,4 +99,18 @@
     <string name="daily">Daily</string>
     <string name="weekly">Weekly</string>
     <string name="monthly">Monthly</string>
+
+    <string name="question11">11. Ownership of the house</string>
+    <string name="question11_rd1">Own</string>
+    <string name="question11_rd2">Rented</string>
+    <string name="question11_rd3">Leased</string>
+
+    <string name="question12">12. Type of house?</string>
+    <string name="question12_rd1">Hut</string>
+    <string name="question12_rd2">Tiled</string>
+    <string name="question12_rd3">Concrete</string>
+
+    <string name="ii_utilization_of_the_student_welfare_schemes">II. UTILIZATION OF THE STUDENT WELFARE SCHEMES</string>
+
+    <string name="question13">13. Which are the following schemes you avail?</string>
 </resources>

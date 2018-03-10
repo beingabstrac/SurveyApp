@@ -14,15 +14,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:paddingTop="16sp"
         android:text="@string/question10"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/tv_question10_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/question10note"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
     <!--FATHER-->
 
     <TextView
-        android:id="@+id/tv_question10_father"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -144,7 +157,6 @@
     <!--MOTHER-->
 
     <TextView
-        android:id="@+id/tv_question10_mother"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -253,6 +265,369 @@
 
     <EditText
         android:id="@+id/et_answer10_mother_mi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/monthly_income_rs"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--PERSON - 1-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/person1"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_question10_person1_noe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/nature_of_employment"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person1_noe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_10_person1_noe_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/govt" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person1_noe_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/private_" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person1_noe_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/self_employment" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person1_noe_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily_wage_labour" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_question10_person1_sm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/salary_mode"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person1_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_10_person1_sm_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson1_sm_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/weekly" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson1_sm_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/monthly" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_answer10_person1_mi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/monthly_income_rs"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--PERSON - 2-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/person2"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_question10_person2_noe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/nature_of_employment"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person2_noe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_10_person2_noe_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/govt" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person2_noe_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/private_" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person2_noe_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/self_employment" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person2_noe_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily_wage_labour" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_question10_person2_sm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/salary_mode"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person2_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_10_person2_sm_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson2_sm_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/weekly" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson2_sm_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/monthly" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_answer10_person2_mi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/monthly_income_rs"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--PERSON - 3-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/person3"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_question10_person3_noe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/nature_of_employment"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person3_noe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_10_person3_noe_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/govt" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person3_noe_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/private_" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person3_noe_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/self_employment" />
+
+        <RadioButton
+            android:id="@+id/rb_10_person3_noe_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily_wage_labour" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_question10_person3_sm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/salary_mode"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_10_person3_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_10_person3_sm_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/daily" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson3_sm_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/weekly" />
+
+        <RadioButton
+            android:id="@+id/rb_10_motherperson3_sm_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/monthly" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_answer10_person3_mi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16sp"

@@ -35,6 +35,23 @@
 
     <include layout="@layout/question10" />
 
+    <include layout="@layout/question11" />
+
+    <include layout="@layout/question12" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:background="@color/colorAccent"
+        android:padding="16sp"
+        android:text="@string/ii_utilization_of_the_student_welfare_schemes"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <include layout="@layout/question13" />
+
     <Button
         android:id="@+id/bt_submit"
         android:layout_width="match_parent"

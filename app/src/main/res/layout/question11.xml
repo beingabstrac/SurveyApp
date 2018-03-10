@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16sp"
+    android:layout_marginRight="16sp"
+    android:layout_marginTop="16sp"
+    android:background="@color/gray_BG"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_question11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="16sp"
+        android:text="@string/question11"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_11_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/question11_rd1" />
+
+        <RadioButton
+            android:id="@+id/rb_11_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/question11_rd2" />
+
+        <RadioButton
+            android:id="@+id/rb_11_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:text="@string/question11_rd3" />
+
+    </RadioGroup>
+
+</LinearLayout>

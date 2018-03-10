@@ -30,9 +30,72 @@
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to send you password reset instructions.</string>
     <string name="prompt_password">Password Hint</string>
-    <string name="answer">Your answer</string>
     <string name="ok">OK</string>
     <string name="rishideep">_rishideep_</string>
-    <string name="clear">Clear</string>
-    <string name="edit">Edit</string>
+    <string name="submit">Submit</string>
+
+
+
+    <!-- -&#45;&#45;&#45;&#45;-->
+
+
+
+    <string name="i_socio_economic_status">I. SOCIO ECONOMIC STATUS</string>
+
+    <string name="question1">1. Name of the student</string>
+
+    <string name="question2">2. Age of the student</string>
+
+    <string name="question3">3. Gender</string>
+    <string name="question3_rd1">Male</string>
+    <string name="question3_rd2">Female</string>
+    <string name="question3_rd3">Transgender</string>
+
+    <string name="question4">4. Caste</string>
+    <string name="question4_rd1">OC</string>
+    <string name="question4_rd2">BC</string>
+    <string name="question4_rd3">MBC</string>
+    <string name="question4_rd4">SC</string>
+    <string name="question4_rd5">ST</string>
+
+    <string name="question5">5. Current education / Education received</string>
+
+    <string name="question6">6. Place of the school</string>
+
+    <string name="question7">7. No of other school going children in the Family</string>
+    <string name="child_1">Child 1</string>
+    <string name="child_2">Child 2</string>
+    <string name="child_3">Child 3</string>
+    <string name="others">Others</string>
+    <string name="age">Age</string>
+
+    <string name="question8">8. Are there any school dropout in the family? (children)</string>
+    <string name="question8_rd1">Yes</string>
+    <string name="question8_rd2">No</string>
+    <string name="question8_2">If yes,</string>
+    <string name="male">Male (nos.)</string>
+    <string name="female">Female (nos.)</string>
+
+    <string name="question9">9. Educational status of the parents</string>
+    <string name="motherName">Mother Name</string>
+    <string name="fatherName">Father Name</string>
+    <string name="gaurdianName">Guardian Name</string>
+    <string name="edStatus">Educational Status</string>
+
+    <string name="question10">10. Occupation and income of the parents &amp; family members</string>
+    <string name="father">FATHER :</string>
+    <string name="mother">MOTHER :</string>
+    <string name="person1">PERSON - 1 :</string>
+    <string name="person2">PERSON - 2 :</string>
+    <string name="person3">PERSON - 3 :</string>
+    <string name="nature_of_employment">Nature of Employment</string>
+    <string name="salary_mode">Salary mode</string>
+    <string name="monthly_income_rs">Monthly Income (Rs.)</string>
+    <string name="govt">Govt.</string>
+    <string name="private_">Private</string>
+    <string name="self_employment">Self-employment</string>
+    <string name="daily_wage_labour">Daily wage labour</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
 </resources>

@@ -1,87 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="16sp"
-    android:layout_marginRight="16sp"
-    android:layout_marginTop="16sp"
-    android:background="@color/btn_login_bg"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_margin="16sp"
+        android:background="@color/colorAccent"
         android:padding="16sp"
-        android:textColor="@android:color/black"
+        android:text="@string/i_socio_economic_status"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
-        tools:text="question" />
+        android:textStyle="bold" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:id="@+id/et_answerLayout"
-        android:layout_height="wrap_content">
+    <include layout="@layout/question01" />
 
-        <EditText
-            android:id="@+id/et_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16sp"
-            android:layout_marginRight="16sp"
-            android:layout_marginTop="16sp"
-            android:hint="@string/answer"
-            android:textColor="@android:color/black" />
-    </android.support.design.widget.TextInputLayout>
+    <include layout="@layout/question02" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <include layout="@layout/question03" />
 
-        <Button
-            android:id="@+id/bt_ok"
-            android:layout_width="55sp"
-            android:layout_height="40sp"
-            android:layout_margin="16sp"
-            android:background="@color/colorAccent"
-            android:text="@string/ok"
-            android:textColor="@color/white" />
+    <include layout="@layout/question04" />
 
-        <Button
-            android:id="@+id/bt_clear"
-            android:layout_width="85sp"
-            android:layout_height="40sp"
-            android:layout_marginBottom="16sp"
-            android:layout_marginTop="16sp"
-            android:background="@color/colorPrimary"
-            android:text="@string/clear"
-            android:textColor="@color/white" />
-    </LinearLayout>
+    <include layout="@layout/question05" />
 
-    <TextView
-        android:id="@+id/tv_answer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingBottom="16sp"
-        android:paddingStart="16sp"
-        android:textColor="@color/bg_login"
-        android:textSize="20sp"
-        android:visibility="gone"
-        tools:ignore="RtlSymmetry"
-        tools:text="answer" />
+    <include layout="@layout/question06" />
+
+    <include layout="@layout/question07" />
+
+    <include layout="@layout/question08" />
+
+    <include layout="@layout/question09" />
+
+    <include layout="@layout/question10" />
 
     <Button
-        android:id="@+id/bt_edit"
-        android:layout_width="70sp"
-        android:layout_height="40sp"
-        android:layout_marginBottom="16sp"
-        android:layout_marginStart="16sp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/edit"
-        android:visibility="gone"
-        android:textColor="@color/white" />
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:background="@color/colorAccent"
+        android:text="@string/submit"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>

@@ -25,37 +25,37 @@ public class MainActivity extends AppCompatActivity {
     Button bt_submit;
     RadioButton radioButton;
 
-    //  Question 1
+    //  init. for QUESTION 1
     TextView tv_question1;
     EditText et_answer1;
     String tv_question1_StringEncode, et_answer1_String;
 
-    //  Question 2
+    //  init. for QUESTION 2
     TextView tv_question2;
     EditText et_answer2;
     String tv_question2_StringEncode, et_answer2_String;
 
-    //  Question 3
+    //  init. for QUESTION 3
     TextView tv_question3;
     RadioGroup rg_3;
     String tv_question3_StringEncode, rb_answer3_String;
 
-    //  Question 4
+    //  init. for QUESTION 4
     TextView tv_question4;
     RadioGroup rg_4;
     String tv_question4_StringEncode, rb_answer4_String;
 
-    //  Question 5
+    //  init. for QUESTION 5
     TextView tv_question5;
     EditText et_answer5;
     String tv_question5_StringEncode, et_answer5_String;
 
-    //  Question 6
+    //  init. for QUESTION 6
     TextView tv_question6;
     EditText et_answer6;
     String tv_question6_StringEncode, et_answer6_String;
 
-    //  Question 7
+    //  init. for QUESTION 7
     TextView tv_question7;
     EditText et_answer7_child1, et_answer7_child2, et_answer7_child3, et_answer7_others;
     EditText et_answer7_age1, et_answer7_age2, et_answer7_age3, et_answer7_ageOthers;
@@ -63,20 +63,20 @@ public class MainActivity extends AppCompatActivity {
     String et_answer7_child1_String, et_answer7_child2_String, et_answer7_child3_String, et_answer7_others_String;
     String et_answer7_age1_String, et_answer7_age2_String, et_answer7_age3_String, et_answer7_ageOthers_String;
 
-    //  Question 8
+    //  init. for QUESTION 8
     TextView tv_question8;
     RadioGroup rg_8;
     EditText et_answer8_male, et_answer8_female;
     String tv_question8_StringEncode, rb_answer8_String, et_answer8_male_String, et_answer8_female_String;
 
-    //  Question 9
+    //  init. for QUESTION 9
     TextView tv_question9;
     EditText et_answer9_motherName, et_answer9_edStatusMN, et_answer9_fatherName, et_answer9_edStatusFN, et_answer9_gaurdianName, et_answer9_edStatusGN;
     String tv_question9_StringEncode;
     String et_answer9_motherName_String, et_answer9_fatherName_String, et_answer9_gaurdianName_String;
     String et_answer9_edStatusMN_String, et_answer9_edStatusFN_String, et_answer9_edStatusGN_String;
 
-    //  Question 10
+    //  init. for QUESTION 10
     TextView tv_question10;
     String tv_question10_StringEncode;
     //  Father
@@ -110,12 +110,12 @@ public class MainActivity extends AppCompatActivity {
     String tv_question10_person3_noe_StringEncode, tv_question10_person3_sm_StringEncode;
     String rb_answer10_person3_noe_String, rb_answer10_person3_sm_String, et_answer10_person3_mi_String;
 
-    //  Question 11
+    //  init. for QUESTION 11
     TextView tv_question11;
     RadioGroup rg_11;
     String tv_question11_StringEncode, rb_answer11_String;
 
-    //  Question 12
+    //  init. for QUESTION 12
     TextView tv_question12;
     RadioGroup rg_12;
     String tv_question12_StringEncode, rb_answer12_String;

@@ -113,4 +113,35 @@
     <string name="ii_utilization_of_the_student_welfare_schemes">II. UTILIZATION OF THE STUDENT WELFARE SCHEMES</string>
 
     <string name="question13">13. Which are the following schemes you avail?</string>
+    <string name="welfare_schemes">WELFARE SCHEMES :</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="not_applicable">Not Applicable</string>
+    <string name="if_no_why">If no, why?</string>
+    <string name="for_all_students">(For all students)</string>
+    <string name="students_to_travel_by_govt_buses_for_all_students">(Students to travel by govt. buses) (For all students)</string>
+    <string name="only_for_1st_and_2nd_standard_students">(Only for 1st and 2nd standard students)</string>
+    <string name="only_for_3rd_to_5th_standard_students">(Only for 3rd to 5th standard students)</string>
+    <string name="only_for_adolescent_girls">(Only for adolescent girls)</string>
+    <string name="only_for_11th_and_12th_standard_students">(Only for 11th and 12th standard students)</string>
+    <string name="only_for_12th_standard_students">(Only for 12th standard students)</string>
+    <string name="preventing_dropouts_of_sc_st_girl_students_the_9th_standard_unmarried_sc_st_girls_of_age_less_than_16_years_are_provided_with_the_fixed_deposit_certificate_for_rs_3000">(Preventing dropouts of SC/ST girl students, the 9th standard unmarried SC/ST girls of age less than 16 years are provided with the fixed deposit certificate for Rs.3000)</string>
+    <string name="only_for_whose_bread_winning_parent_dies_in_an_accident_or_is_rendered_permanently_incapacitated_or_incapacitate">(Only for whose bread winning parent dies in an accident or is rendered permanently incapacitated or incapacitate)</string>
+
+    <string name="question13_01">01. Distribution of Textbooks</string>
+    <string name="question13_02">02. Free  notebooks</string>
+    <string name="question13_03">03. Free uniforms - 4 sets</string>
+    <string name="question13_04">04. Geometry box</string>
+    <string name="question13_05">05. Atlas</string>
+    <string name="question13_06">06. Chappals</string>
+    <string name="question13_07">07. Free bus pass</string>
+    <string name="question13_08">08. Dr. MGR nutritious meal scheme</string>
+    <string name="question13_09">09. Crayons</string>
+    <string name="question13_10">10. Color pencils</string>
+    <string name="question13_11">11. Weekly Iron and Folic Acid Supplementation (WIFS) programme</string>
+    <string name="question13_12">12. Napkins</string>
+    <string name="question13_13">13. Distribution of free bicycles</string>
+    <string name="question13_14">14. Laptop</string>
+    <string name="question13_15">15. Girls’ Incentive Scheme</string>
+    <string name="question13_16">16. Financial assistance for students benefit of parental support</string>
 </resources>

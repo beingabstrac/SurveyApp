@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     Button bt_submit;
     RadioButton radioButton;
+
+    ImageView iv_i_socio_economic_status_01, iv_i_socio_economic_status_02, iv_tv_ii_utilization_of_the_student_welfare_schemes_01, iv_tv_ii_utilization_of_the_student_welfare_schemes_02;
+    LinearLayout ll_i_socio_economic_status, ll_ii_utilization_of_the_student_welfare_schemes;
 
     //  init. for QUESTION 1
     TextView tv_question1;
@@ -120,6 +125,32 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rg_12;
     String tv_question12_StringEncode, rb_answer12_String;
 
+    //  init. for QUESTION 13
+    TextView tv_question13;
+    String tv_question13_StringEncode;
+    TextView tv_question13_Q01, tv_question13_Q02, tv_question13_Q03, tv_question13_Q04, tv_question13_Q05, tv_question13_Q06, tv_question13_Q07, tv_question13_Q08, tv_question13_Q09, tv_question13_Q10, tv_question13_Q11, tv_question13_Q12, tv_question13_Q13, tv_question13_Q14, tv_question13_Q15, tv_question13_Q16;
+    String tv_question13_Q01_StringEncode, tv_question13_Q02_StringEncode, tv_question13_Q03_StringEncode, tv_question13_Q04_StringEncode, tv_question13_Q05_StringEncode, tv_question13_Q06_StringEncode, tv_question13_Q07_StringEncode, tv_question13_Q08_StringEncode, tv_question13_Q09_StringEncode, tv_question13_Q10_StringEncode, tv_question13_Q11_StringEncode, tv_question13_Q12_StringEncode, tv_question13_Q13_StringEncode, tv_question13_Q14_StringEncode, tv_question13_Q15_StringEncode, tv_question13_Q16_StringEncode;
+    RadioGroup rg_13_01, rg_13_02, rg_13_03, rg_13_04, rg_13_05, rg_13_06, rg_13_07, rg_13_08, rg_13_09, rg_13_10, rg_13_11, rg_13_12, rg_13_13, rg_13_14, rg_13_15, rg_13_16;
+    String rb_13_01_answer_String, rb_13_02_answer_String, rb_13_03_answer_String, rb_13_04_answer_String, rb_13_05_answer_String, rb_13_06_answer_String, rb_13_07_answer_String, rb_13_08_answer_String, rb_13_09_answer_String, rb_13_10_answer_String, rb_13_11_answer_String, rb_13_12_answer_String, rb_13_13_answer_String, rb_13_14_answer_String, rb_13_15_answer_String, rb_13_16_answer_String;
+    EditText et_answer13_01_inw, et_answer13_02_inw, et_answer13_03_inw, et_answer13_04_inw, et_answer13_05_inw, et_answer13_06_inw, et_answer13_07_inw, et_answer13_08_inw, et_answer13_09_inw, et_answer13_10_inw, et_answer13_11_inw, et_answer13_12_inw, et_answer13_13_inw, et_answer13_14_inw, et_answer13_15_inw, et_answer13_16_inw;
+    String et_answer13_01_inw_String, et_answer13_02_inw_String, et_answer13_03_inw_String, et_answer13_04_inw_String, et_answer13_05_inw_String, et_answer13_06_inw_String, et_answer13_07_inw_String, et_answer13_08_inw_String, et_answer13_09_inw_String, et_answer13_10_inw_String, et_answer13_11_inw_String, et_answer13_12_inw_String, et_answer13_13_inw_String, et_answer13_14_inw_String, et_answer13_15_inw_String, et_answer13_16_inw_String;
+
+    //  init. for QUESTION 14
+    TextView tv_question14;
+    String tv_question14_StringEncode;
+    TextView tv_question14_Q01, tv_question14_Q02, tv_question14_Q03, tv_question14_Q04, tv_question14_Q05, tv_question14_Q06, tv_question14_Q07, tv_question14_Q08, tv_question14_Q09, tv_question14_Q10, tv_question14_Q11, tv_question14_Q12, tv_question14_Q13, tv_question14_Q14, tv_question14_Q15, tv_question14_Q16;
+    String tv_question14_Q01_StringEncode, tv_question14_Q02_StringEncode, tv_question14_Q03_StringEncode, tv_question14_Q04_StringEncode, tv_question14_Q05_StringEncode, tv_question14_Q06_StringEncode, tv_question14_Q07_StringEncode, tv_question14_Q08_StringEncode, tv_question14_Q09_StringEncode, tv_question14_Q10_StringEncode, tv_question14_Q11_StringEncode, tv_question14_Q12_StringEncode, tv_question14_Q13_StringEncode, tv_question14_Q14_StringEncode, tv_question14_Q15_StringEncode, tv_question14_Q16_StringEncode;
+    RadioGroup rg_14_01, rg_14_02, rg_14_03, rg_14_04, rg_14_05, rg_14_06, rg_14_07, rg_14_08, rg_14_09, rg_14_10, rg_14_11, rg_14_12, rg_14_13, rg_14_14, rg_14_15, rg_14_16;
+    String rb_14_01_answer_String, rb_14_02_answer_String, rb_14_03_answer_String, rb_14_04_answer_String, rb_14_05_answer_String, rb_14_06_answer_String, rb_14_07_answer_String, rb_14_08_answer_String, rb_14_09_answer_String, rb_14_10_answer_String, rb_14_11_answer_String, rb_14_12_answer_String, rb_14_13_answer_String, rb_14_14_answer_String, rb_14_15_answer_String, rb_14_16_answer_String;
+
+    //  init. for QUESTION 15
+    TextView tv_question15;
+    String tv_question15_StringEncode;
+    TextView tv_question15_Q01, tv_question15_Q02, tv_question15_Q03, tv_question15_Q04, tv_question15_Q05, tv_question15_Q06, tv_question15_Q07, tv_question15_Q08, tv_question15_Q09, tv_question15_Q10, tv_question15_Q11, tv_question15_Q12, tv_question15_Q13, tv_question15_Q14, tv_question15_Q15, tv_question15_Q16;
+    String tv_question15_Q01_StringEncode, tv_question15_Q02_StringEncode, tv_question15_Q03_StringEncode, tv_question15_Q04_StringEncode, tv_question15_Q05_StringEncode, tv_question15_Q06_StringEncode, tv_question15_Q07_StringEncode, tv_question15_Q08_StringEncode, tv_question15_Q09_StringEncode, tv_question15_Q10_StringEncode, tv_question15_Q11_StringEncode, tv_question15_Q12_StringEncode, tv_question15_Q13_StringEncode, tv_question15_Q14_StringEncode, tv_question15_Q15_StringEncode, tv_question15_Q16_StringEncode;
+    EditText et_answer15_01_or, et_answer15_02_or, et_answer15_03_or, et_answer15_04_or, et_answer15_05_or, et_answer15_06_or, et_answer15_07_or, et_answer15_08_or, et_answer15_09_or, et_answer15_10_or, et_answer15_11_or, et_answer15_12_or, et_answer15_13_or, et_answer15_14_or, et_answer15_15_or, et_answer15_16_or;
+    String et_answer15_01_or_String, et_answer15_02_or_String, et_answer15_03_or_String, et_answer15_04_or_String, et_answer15_05_or_String, et_answer15_06_or_String, et_answer15_07_or_String, et_answer15_08_or_String, et_answer15_09_or_String, et_answer15_10_or_String, et_answer15_11_or_String, et_answer15_12_or_String, et_answer15_13_or_String, et_answer15_14_or_String, et_answer15_15_or_String, et_answer15_16_or_String;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -153,6 +184,63 @@ public class MainActivity extends AppCompatActivity {
                 question10();   //  10. OCCUPATION AND INCOME OF THE PARENTS AND FAMILY MEMBERS
                 question11();   //  11. OWNERSHIP OF THE HOUSE
                 question12();   //  12. TYPE OF HOUSE
+                question13();   //  13. WHICH ARE THE FOLLOWING SCHEMES YOU AVAIL
+                question14();   //  14. WHICH IS THE LEVEL OF UTILIZATION OF THE FOLLOWING SCHEMES BY YOU
+                question15();   //  15. ORDER OR RANK THE FOLLOWING SCHEMES BASED ON THE UTILITY OF THE SCHEME TO YOU
+            }
+        });
+
+        //  I. SOCIO ECONOMIC STATUS
+        iv_i_socio_economic_status_01 = findViewById(R.id.iv_i_socio_economic_status_01);
+        iv_i_socio_economic_status_02 = findViewById(R.id.iv_i_socio_economic_status_02);
+
+        iv_i_socio_economic_status_01.setImageResource(R.drawable.ic_arrow_drop_down_black_24dp);
+        iv_i_socio_economic_status_01.setVisibility(View.VISIBLE);
+        iv_i_socio_economic_status_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_i_socio_economic_status = findViewById(R.id.ll_i_socio_economic_status);
+                ll_i_socio_economic_status.setVisibility(View.VISIBLE);
+                iv_i_socio_economic_status_01.setVisibility(View.GONE);
+                iv_i_socio_economic_status_02.setVisibility(View.VISIBLE);
+            }
+        });
+
+        iv_i_socio_economic_status_02.setImageResource(R.drawable.ic_arrow_drop_up_black_24dp);
+        iv_i_socio_economic_status_02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_i_socio_economic_status = findViewById(R.id.ll_i_socio_economic_status);
+                ll_i_socio_economic_status.setVisibility(View.GONE);
+                iv_i_socio_economic_status_02.setVisibility(View.GONE);
+                iv_i_socio_economic_status_01.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //  II. UTILIZATION OF THE STUDENT WELFARE SCHEMES
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_01 = findViewById(R.id.iv_tv_ii_utilization_of_the_student_welfare_schemes_01);
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_02 = findViewById(R.id.iv_tv_ii_utilization_of_the_student_welfare_schemes_02);
+
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setImageResource(R.drawable.ic_arrow_drop_down_black_24dp);
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setVisibility(View.VISIBLE);
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_ii_utilization_of_the_student_welfare_schemes = findViewById(R.id.ll_ii_utilization_of_the_student_welfare_schemes);
+                ll_ii_utilization_of_the_student_welfare_schemes.setVisibility(View.VISIBLE);
+                iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setVisibility(View.GONE);
+                iv_tv_ii_utilization_of_the_student_welfare_schemes_02.setVisibility(View.VISIBLE);
+            }
+        });
+
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_02.setImageResource(R.drawable.ic_arrow_drop_up_black_24dp);
+        iv_tv_ii_utilization_of_the_student_welfare_schemes_02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_ii_utilization_of_the_student_welfare_schemes = findViewById(R.id.ll_ii_utilization_of_the_student_welfare_schemes);
+                ll_ii_utilization_of_the_student_welfare_schemes.setVisibility(View.GONE);
+                iv_tv_ii_utilization_of_the_student_welfare_schemes_02.setVisibility(View.GONE);
+                iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -629,6 +717,853 @@ public class MainActivity extends AppCompatActivity {
             databaseReference.child(tv_question12_StringEncode).setValue(rb_answer12_String);
         } else {
             databaseReference.child(tv_question12_StringEncode).setValue("");
+        }
+    }
+
+    void question13() {
+        tv_question13 = findViewById(R.id.tv_question13);
+        tv_question13_StringEncode = EncodeString(tv_question13.getText().toString());
+
+        //  QUESTION 13 - 01
+        tv_question13_Q01 = findViewById(R.id.tv_question13_Q01);
+        tv_question13_Q01_StringEncode = EncodeString(tv_question13_Q01.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_01 = findViewById(R.id.rg_13_01);
+        if (rg_13_01.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_01.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_01_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q01_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_01_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q01_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_01_inw = findViewById(R.id.et_answer13_01_inw);
+        et_answer13_01_inw_String = et_answer13_01_inw.getText().toString();
+        if (et_answer13_01_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q01_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q01_StringEncode).child("If no, why?").setValue(et_answer13_01_inw_String);
+        }
+
+        //  QUESTION 13 - 02
+        tv_question13_Q02 = findViewById(R.id.tv_question13_Q02);
+        tv_question13_Q02_StringEncode = EncodeString(tv_question13_Q02.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_02 = findViewById(R.id.rg_13_02);
+        if (rg_13_02.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_02.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_02_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q02_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_02_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q02_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_02_inw = findViewById(R.id.et_answer13_02_inw);
+        et_answer13_02_inw_String = et_answer13_02_inw.getText().toString();
+        if (et_answer13_02_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q02_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q02_StringEncode).child("If no, why?").setValue(et_answer13_02_inw_String);
+        }
+
+        //  QUESTION 13 - 03
+        tv_question13_Q03 = findViewById(R.id.tv_question13_Q03);
+        tv_question13_Q03_StringEncode = EncodeString(tv_question13_Q03.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_03 = findViewById(R.id.rg_13_03);
+        if (rg_13_03.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_03.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_03_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q03_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_03_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q03_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_03_inw = findViewById(R.id.et_answer13_03_inw);
+        et_answer13_03_inw_String = et_answer13_03_inw.getText().toString();
+        if (et_answer13_03_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q03_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q03_StringEncode).child("If no, why?").setValue(et_answer13_03_inw_String);
+        }
+
+        //  QUESTION 13 - 04
+        tv_question13_Q04 = findViewById(R.id.tv_question13_Q04);
+        tv_question13_Q04_StringEncode = EncodeString(tv_question13_Q04.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_04 = findViewById(R.id.rg_13_04);
+        if (rg_13_04.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_04.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_04_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q04_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_04_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q04_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_04_inw = findViewById(R.id.et_answer13_04_inw);
+        et_answer13_04_inw_String = et_answer13_04_inw.getText().toString();
+        if (et_answer13_04_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q04_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q04_StringEncode).child("If no, why?").setValue(et_answer13_04_inw_String);
+        }
+
+        //  QUESTION 13 - 05
+        tv_question13_Q05 = findViewById(R.id.tv_question13_Q05);
+        tv_question13_Q05_StringEncode = EncodeString(tv_question13_Q05.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_05 = findViewById(R.id.rg_13_05);
+        if (rg_13_05.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_05.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_05_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q05_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_05_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q05_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_05_inw = findViewById(R.id.et_answer13_05_inw);
+        et_answer13_05_inw_String = et_answer13_05_inw.getText().toString();
+        if (et_answer13_05_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q05_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q05_StringEncode).child("If no, why?").setValue(et_answer13_05_inw_String);
+        }
+
+        //  QUESTION 13 - 06
+        tv_question13_Q06 = findViewById(R.id.tv_question13_Q06);
+        tv_question13_Q06_StringEncode = EncodeString(tv_question13_Q06.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_06 = findViewById(R.id.rg_13_06);
+        if (rg_13_06.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_06.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_06_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q06_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_06_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q06_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_06_inw = findViewById(R.id.et_answer13_06_inw);
+        et_answer13_06_inw_String = et_answer13_06_inw.getText().toString();
+        if (et_answer13_06_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q06_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q06_StringEncode).child("If no, why?").setValue(et_answer13_06_inw_String);
+        }
+
+        //  QUESTION 13 - 07
+        tv_question13_Q07 = findViewById(R.id.tv_question13_Q07);
+        tv_question13_Q07_StringEncode = EncodeString(tv_question13_Q07.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_07 = findViewById(R.id.rg_13_07);
+        if (rg_13_07.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_07.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_07_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q07_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_07_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q07_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_07_inw = findViewById(R.id.et_answer13_07_inw);
+        et_answer13_07_inw_String = et_answer13_07_inw.getText().toString();
+        if (et_answer13_07_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q07_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q07_StringEncode).child("If no, why?").setValue(et_answer13_07_inw_String);
+        }
+
+        //  QUESTION 13 - 08
+        tv_question13_Q08 = findViewById(R.id.tv_question13_Q08);
+        tv_question13_Q08_StringEncode = EncodeString(tv_question13_Q08.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_08 = findViewById(R.id.rg_13_08);
+        if (rg_13_08.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_08.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_08_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q08_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_08_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q08_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_08_inw = findViewById(R.id.et_answer13_08_inw);
+        et_answer13_08_inw_String = et_answer13_08_inw.getText().toString();
+        if (et_answer13_08_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q08_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q08_StringEncode).child("If no, why?").setValue(et_answer13_08_inw_String);
+        }
+
+        //  QUESTION 13 - 09
+        tv_question13_Q09 = findViewById(R.id.tv_question13_Q09);
+        tv_question13_Q09_StringEncode = EncodeString(tv_question13_Q09.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_09 = findViewById(R.id.rg_13_09);
+        if (rg_13_09.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_09.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_09_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q09_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_09_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q09_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_09_inw = findViewById(R.id.et_answer13_09_inw);
+        et_answer13_09_inw_String = et_answer13_09_inw.getText().toString();
+        if (et_answer13_09_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q09_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q09_StringEncode).child("If no, why?").setValue(et_answer13_09_inw_String);
+        }
+
+        //  QUESTION 13 - 10
+        tv_question13_Q10 = findViewById(R.id.tv_question13_Q10);
+        tv_question13_Q10_StringEncode = EncodeString(tv_question13_Q10.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_10 = findViewById(R.id.rg_13_10);
+        if (rg_13_10.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_10.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_10_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q10_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_10_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q10_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_10_inw = findViewById(R.id.et_answer13_10_inw);
+        et_answer13_10_inw_String = et_answer13_10_inw.getText().toString();
+        if (et_answer13_10_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q10_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q10_StringEncode).child("If no, why?").setValue(et_answer13_10_inw_String);
+        }
+
+        //  QUESTION 13 - 11
+        tv_question13_Q11 = findViewById(R.id.tv_question13_Q11);
+        tv_question13_Q11_StringEncode = EncodeString(tv_question13_Q11.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_11 = findViewById(R.id.rg_13_11);
+        if (rg_13_11.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_11.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_11_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q11_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_11_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q11_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_11_inw = findViewById(R.id.et_answer13_11_inw);
+        et_answer13_11_inw_String = et_answer13_11_inw.getText().toString();
+        if (et_answer13_11_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q11_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q11_StringEncode).child("If no, why?").setValue(et_answer13_11_inw_String);
+        }
+
+        //  QUESTION 13 - 12
+        tv_question13_Q12 = findViewById(R.id.tv_question13_Q12);
+        tv_question13_Q12_StringEncode = EncodeString(tv_question13_Q12.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_12 = findViewById(R.id.rg_13_12);
+        if (rg_13_12.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_12.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_12_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q12_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_12_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q12_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_12_inw = findViewById(R.id.et_answer13_12_inw);
+        et_answer13_12_inw_String = et_answer13_12_inw.getText().toString();
+        if (et_answer13_12_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q12_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q12_StringEncode).child("If no, why?").setValue(et_answer13_12_inw_String);
+        }
+
+        //  QUESTION 13 - 13
+        tv_question13_Q13 = findViewById(R.id.tv_question13_Q13);
+        tv_question13_Q13_StringEncode = EncodeString(tv_question13_Q13.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_13 = findViewById(R.id.rg_13_13);
+        if (rg_13_13.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_13.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_13_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q13_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_13_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q13_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_13_inw = findViewById(R.id.et_answer13_13_inw);
+        et_answer13_13_inw_String = et_answer13_13_inw.getText().toString();
+        if (et_answer13_13_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q13_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q13_StringEncode).child("If no, why?").setValue(et_answer13_13_inw_String);
+        }
+
+        //  QUESTION 13 - 14
+        tv_question13_Q14 = findViewById(R.id.tv_question13_Q14);
+        tv_question13_Q14_StringEncode = EncodeString(tv_question13_Q14.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_14 = findViewById(R.id.rg_13_14);
+        if (rg_13_14.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_14.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_14_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q14_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_14_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q14_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_14_inw = findViewById(R.id.et_answer13_14_inw);
+        et_answer13_14_inw_String = et_answer13_14_inw.getText().toString();
+        if (et_answer13_14_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q14_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q14_StringEncode).child("If no, why?").setValue(et_answer13_14_inw_String);
+        }
+
+        //  QUESTION 13 - 15
+        tv_question13_Q15 = findViewById(R.id.tv_question13_Q15);
+        tv_question13_Q15_StringEncode = EncodeString(tv_question13_Q15.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_15 = findViewById(R.id.rg_13_15);
+        if (rg_13_15.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_15.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_15_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q15_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_15_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q15_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_15_inw = findViewById(R.id.et_answer13_15_inw);
+        et_answer13_15_inw_String = et_answer13_15_inw.getText().toString();
+        if (et_answer13_15_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q15_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q15_StringEncode).child("If no, why?").setValue(et_answer13_15_inw_String);
+        }
+
+        //  QUESTION 13 - 16
+        tv_question13_Q16 = findViewById(R.id.tv_question13_Q16);
+        tv_question13_Q16_StringEncode = EncodeString(tv_question13_Q16.getText().toString());
+
+        //  YES (or) NO (or) NOT APPLICABLE
+        rg_13_16 = findViewById(R.id.rg_13_16);
+        if (rg_13_16.getCheckedRadioButtonId() != -1) {
+            int selectedId13 = rg_13_16.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId13);
+            rb_13_16_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q16_StringEncode).child("Yes (or) No (or) Not Applicable").setValue(rb_13_16_answer_String);
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q16_StringEncode).child("Yes (or) No (or) Not Applicable").setValue("");
+        }
+
+        //  IF NO, WHY?
+        et_answer13_16_inw = findViewById(R.id.et_answer13_16_inw);
+        et_answer13_16_inw_String = et_answer13_16_inw.getText().toString();
+        if (et_answer13_16_inw_String.isEmpty()) {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q16_StringEncode).child("If no, why?").setValue("");
+        } else {
+            databaseReference.child(tv_question13_StringEncode).child(tv_question13_Q16_StringEncode).child("If no, why?").setValue(et_answer13_16_inw_String);
+        }
+    }
+
+    void question14() {
+        tv_question14 = findViewById(R.id.tv_question14);
+        tv_question14_StringEncode = EncodeString(tv_question14.getText().toString());
+
+        //  QUESTION 14 - 01
+        tv_question14_Q01 = findViewById(R.id.tv_question14_Q01);
+        tv_question14_Q01_StringEncode = EncodeString(tv_question14_Q01.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_01 = findViewById(R.id.rg_14_01);
+        if (rg_14_01.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_01.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_01_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q01_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_01_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q01_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 02
+        tv_question14_Q02 = findViewById(R.id.tv_question14_Q02);
+        tv_question14_Q02_StringEncode = EncodeString(tv_question14_Q02.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_02 = findViewById(R.id.rg_14_02);
+        if (rg_14_02.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_02.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_02_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q02_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_02_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q02_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 03
+        tv_question14_Q03 = findViewById(R.id.tv_question14_Q03);
+        tv_question14_Q03_StringEncode = EncodeString(tv_question14_Q03.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_03 = findViewById(R.id.rg_14_03);
+        if (rg_14_03.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_03.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_03_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q03_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_03_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q03_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 04
+        tv_question14_Q04 = findViewById(R.id.tv_question14_Q04);
+        tv_question14_Q04_StringEncode = EncodeString(tv_question14_Q04.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_04 = findViewById(R.id.rg_14_04);
+        if (rg_14_04.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_04.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_04_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q04_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_04_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q04_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 05
+        tv_question14_Q05 = findViewById(R.id.tv_question14_Q05);
+        tv_question14_Q05_StringEncode = EncodeString(tv_question14_Q05.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_05 = findViewById(R.id.rg_14_05);
+        if (rg_14_05.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_05.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_05_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q05_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_05_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q05_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 06
+        tv_question14_Q06 = findViewById(R.id.tv_question14_Q06);
+        tv_question14_Q06_StringEncode = EncodeString(tv_question14_Q06.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_06 = findViewById(R.id.rg_14_06);
+        if (rg_14_06.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_06.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_06_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q06_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_06_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q06_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 07
+        tv_question14_Q07 = findViewById(R.id.tv_question14_Q07);
+        tv_question14_Q07_StringEncode = EncodeString(tv_question14_Q07.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_07 = findViewById(R.id.rg_14_07);
+        if (rg_14_07.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_07.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_07_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q07_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_07_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q07_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 08
+        tv_question14_Q08 = findViewById(R.id.tv_question14_Q08);
+        tv_question14_Q08_StringEncode = EncodeString(tv_question14_Q08.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_08 = findViewById(R.id.rg_14_08);
+        if (rg_14_08.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_08.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_08_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q08_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_08_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q08_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 09
+        tv_question14_Q09 = findViewById(R.id.tv_question14_Q09);
+        tv_question14_Q09_StringEncode = EncodeString(tv_question14_Q09.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_09 = findViewById(R.id.rg_14_09);
+        if (rg_14_09.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_09.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_09_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q09_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_09_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q09_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 10
+        tv_question14_Q10 = findViewById(R.id.tv_question14_Q10);
+        tv_question14_Q10_StringEncode = EncodeString(tv_question14_Q10.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_10 = findViewById(R.id.rg_14_10);
+        if (rg_14_10.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_10.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_10_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q10_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_10_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q10_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 11
+        tv_question14_Q11 = findViewById(R.id.tv_question14_Q11);
+        tv_question14_Q11_StringEncode = EncodeString(tv_question14_Q11.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_11 = findViewById(R.id.rg_14_11);
+        if (rg_14_11.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_11.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_11_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q11_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_11_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q11_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 12
+        tv_question14_Q12 = findViewById(R.id.tv_question14_Q12);
+        tv_question14_Q12_StringEncode = EncodeString(tv_question14_Q12.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_12 = findViewById(R.id.rg_14_12);
+        if (rg_14_12.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_12.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_12_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q12_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_12_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q12_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 13
+        tv_question14_Q13 = findViewById(R.id.tv_question14_Q13);
+        tv_question14_Q13_StringEncode = EncodeString(tv_question14_Q13.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_13 = findViewById(R.id.rg_14_13);
+        if (rg_14_13.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_13.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_13_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q13_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_13_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q13_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 14
+        tv_question14_Q14 = findViewById(R.id.tv_question14_Q14);
+        tv_question14_Q14_StringEncode = EncodeString(tv_question14_Q14.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_14 = findViewById(R.id.rg_14_14);
+        if (rg_14_14.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_14.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_14_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q14_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_14_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q14_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 15
+        tv_question14_Q15 = findViewById(R.id.tv_question14_Q15);
+        tv_question14_Q15_StringEncode = EncodeString(tv_question14_Q15.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_15 = findViewById(R.id.rg_14_15);
+        if (rg_14_15.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_15.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_15_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q15_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_15_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q15_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+
+        //  QUESTION 14 - 16
+        tv_question14_Q16 = findViewById(R.id.tv_question14_Q16);
+        tv_question14_Q16_StringEncode = EncodeString(tv_question14_Q16.getText().toString());
+
+        //  NOT UTILISED (or) PARTIALLY UTILISED (or) FULLY UTILISED
+        rg_14_16 = findViewById(R.id.rg_14_16);
+        if (rg_14_16.getCheckedRadioButtonId() != -1) {
+            int selectedId14 = rg_14_16.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId14);
+            rb_14_16_answer_String = radioButton.getText().toString();
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q16_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue(rb_14_16_answer_String);
+        } else {
+            databaseReference.child(tv_question14_StringEncode).child(tv_question14_Q16_StringEncode).child("Not Utilised (or) Partially Utilised (or) Fully Utilised").setValue("");
+        }
+    }
+
+    void question15() {
+        tv_question15 = findViewById(R.id.tv_question15);
+        tv_question15_StringEncode = EncodeString(tv_question15.getText().toString());
+
+        //  QUESTION 15 - 01
+        tv_question15_Q01 = findViewById(R.id.tv_question15_Q01);
+        tv_question15_Q01_StringEncode = EncodeString(tv_question15_Q01.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_01_or = findViewById(R.id.et_answer15_01_or);
+        et_answer15_01_or_String = et_answer15_01_or.getText().toString();
+        if (et_answer15_01_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q01_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q01_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_01_or_String);
+        }
+
+        //  QUESTION 15 - 02
+        tv_question15_Q02 = findViewById(R.id.tv_question15_Q02);
+        tv_question15_Q02_StringEncode = EncodeString(tv_question15_Q02.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_02_or = findViewById(R.id.et_answer15_02_or);
+        et_answer15_02_or_String = et_answer15_02_or.getText().toString();
+        if (et_answer15_02_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q02_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q02_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_02_or_String);
+        }
+
+        //  QUESTION 15 - 03
+        tv_question15_Q03 = findViewById(R.id.tv_question15_Q03);
+        tv_question15_Q03_StringEncode = EncodeString(tv_question15_Q03.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_03_or = findViewById(R.id.et_answer15_03_or);
+        et_answer15_03_or_String = et_answer15_03_or.getText().toString();
+        if (et_answer15_03_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q03_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q03_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_03_or_String);
+        }
+
+        //  QUESTION 15 - 04
+        tv_question15_Q04 = findViewById(R.id.tv_question15_Q04);
+        tv_question15_Q04_StringEncode = EncodeString(tv_question15_Q04.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_04_or = findViewById(R.id.et_answer15_04_or);
+        et_answer15_04_or_String = et_answer15_04_or.getText().toString();
+        if (et_answer15_04_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q04_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q04_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_04_or_String);
+        }
+
+        //  QUESTION 15 - 05
+        tv_question15_Q05 = findViewById(R.id.tv_question15_Q05);
+        tv_question15_Q05_StringEncode = EncodeString(tv_question15_Q05.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_05_or = findViewById(R.id.et_answer15_05_or);
+        et_answer15_05_or_String = et_answer15_05_or.getText().toString();
+        if (et_answer15_05_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q05_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q05_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_05_or_String);
+        }
+
+        //  QUESTION 15 - 06
+        tv_question15_Q06 = findViewById(R.id.tv_question15_Q06);
+        tv_question15_Q06_StringEncode = EncodeString(tv_question15_Q06.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_06_or = findViewById(R.id.et_answer15_06_or);
+        et_answer15_06_or_String = et_answer15_06_or.getText().toString();
+        if (et_answer15_06_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q06_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q06_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_06_or_String);
+        }
+
+        //  QUESTION 15 - 07
+        tv_question15_Q07 = findViewById(R.id.tv_question15_Q07);
+        tv_question15_Q07_StringEncode = EncodeString(tv_question15_Q07.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_07_or = findViewById(R.id.et_answer15_07_or);
+        et_answer15_07_or_String = et_answer15_07_or.getText().toString();
+        if (et_answer15_07_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q07_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q07_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_07_or_String);
+        }
+
+        //  QUESTION 15 - 08
+        tv_question15_Q08 = findViewById(R.id.tv_question15_Q08);
+        tv_question15_Q08_StringEncode = EncodeString(tv_question15_Q08.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_08_or = findViewById(R.id.et_answer15_08_or);
+        et_answer15_08_or_String = et_answer15_08_or.getText().toString();
+        if (et_answer15_08_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q08_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q08_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_08_or_String);
+        }
+
+        //  QUESTION 15 - 09
+        tv_question15_Q09 = findViewById(R.id.tv_question15_Q09);
+        tv_question15_Q09_StringEncode = EncodeString(tv_question15_Q09.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_09_or = findViewById(R.id.et_answer15_09_or);
+        et_answer15_09_or_String = et_answer15_09_or.getText().toString();
+        if (et_answer15_09_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q09_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q09_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_09_or_String);
+        }
+
+        //  QUESTION 15 - 10
+        tv_question15_Q10 = findViewById(R.id.tv_question15_Q10);
+        tv_question15_Q10_StringEncode = EncodeString(tv_question15_Q10.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_10_or = findViewById(R.id.et_answer15_10_or);
+        et_answer15_10_or_String = et_answer15_10_or.getText().toString();
+        if (et_answer15_10_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q10_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q10_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_10_or_String);
+        }
+
+        //  QUESTION 15 - 11
+        tv_question15_Q11 = findViewById(R.id.tv_question15_Q11);
+        tv_question15_Q11_StringEncode = EncodeString(tv_question15_Q11.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_11_or = findViewById(R.id.et_answer15_11_or);
+        et_answer15_11_or_String = et_answer15_11_or.getText().toString();
+        if (et_answer15_11_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q11_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q11_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_11_or_String);
+        }
+
+        //  QUESTION 15 - 12
+        tv_question15_Q12 = findViewById(R.id.tv_question15_Q12);
+        tv_question15_Q12_StringEncode = EncodeString(tv_question15_Q12.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_12_or = findViewById(R.id.et_answer15_12_or);
+        et_answer15_12_or_String = et_answer15_12_or.getText().toString();
+        if (et_answer15_12_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q12_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q12_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_12_or_String);
+        }
+
+        //  QUESTION 15 - 13
+        tv_question15_Q13 = findViewById(R.id.tv_question15_Q13);
+        tv_question15_Q13_StringEncode = EncodeString(tv_question15_Q13.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_13_or = findViewById(R.id.et_answer15_13_or);
+        et_answer15_13_or_String = et_answer15_13_or.getText().toString();
+        if (et_answer15_13_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q13_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q13_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_13_or_String);
+        }
+
+        //  QUESTION 15 - 14
+        tv_question15_Q14 = findViewById(R.id.tv_question15_Q14);
+        tv_question15_Q14_StringEncode = EncodeString(tv_question15_Q14.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_14_or = findViewById(R.id.et_answer15_14_or);
+        et_answer15_14_or_String = et_answer15_14_or.getText().toString();
+        if (et_answer15_14_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q14_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q14_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_14_or_String);
+        }
+
+        //  QUESTION 15 - 15
+        tv_question15_Q15 = findViewById(R.id.tv_question15_Q15);
+        tv_question15_Q15_StringEncode = EncodeString(tv_question15_Q15.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_15_or = findViewById(R.id.et_answer15_15_or);
+        et_answer15_15_or_String = et_answer15_15_or.getText().toString();
+        if (et_answer15_15_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q15_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q15_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_15_or_String);
+        }
+
+        //  QUESTION 15 - 16
+        tv_question15_Q16 = findViewById(R.id.tv_question15_Q16);
+        tv_question15_Q16_StringEncode = EncodeString(tv_question15_Q16.getText().toString());
+
+        //  ORDER / RANK [1 to 16]
+        et_answer15_16_or = findViewById(R.id.et_answer15_16_or);
+        et_answer15_16_or_String = et_answer15_16_or.getText().toString();
+        if (et_answer15_16_or_String.isEmpty()) {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q16_StringEncode).child("Order , Rank (1 to 16)").setValue("");
+        } else {
+            databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q16_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_16_or_String);
         }
     }
 

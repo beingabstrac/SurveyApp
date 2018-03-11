@@ -1,0 +1,623 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16sp"
+    android:layout_marginRight="16sp"
+    android:layout_marginTop="16sp"
+    android:background="@color/gray_BG"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_question15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:paddingTop="16sp"
+        android:text="@string/question15"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_question15_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/question15note"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/welfare_schemes"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--QUESTION 15-01-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_01"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_01_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-02-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_02"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_02_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-03-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_03"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_03_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-04-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_04"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_04_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-05-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_05"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_05_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-06-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q06"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_06"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_06_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-07-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q07"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_07"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/students_to_travel_by_govt_buses_for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_07_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-08-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q08"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_08"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/for_all_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_08_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-09-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q09"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_09"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_1st_and_2nd_standard_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_09_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-10-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_10"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_3rd_to_5th_standard_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_10_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-11-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_11"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_adolescent_girls"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_11_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-12-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_12"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_adolescent_girls"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_12_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-13-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_13"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_11th_and_12th_standard_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_13_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-14-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_14"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_12th_standard_students"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_14_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-15-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_15"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/preventing_dropouts_of_sc_st_girl_students_the_9th_standard_unmarried_sc_st_girls_of_age_less_than_16_years_are_provided_with_the_fixed_deposit_certificate_for_rs_3000"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_15_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+    <!--QUESTION 15-16-->
+
+    <TextView
+        android:id="@+id/tv_question15_Q16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:text="@string/question13_16"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp"
+        android:text="@string/only_for_whose_bread_winning_parent_dies_in_an_accident_or_is_rendered_permanently_incapacitated_or_incapacitate"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_answer15_16_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:hint="@string/order_rank_1_to_16"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+</LinearLayout>

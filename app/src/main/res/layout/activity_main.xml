@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <include layout="@layout/list_item" />
+        <include layout="@layout/items" />
 
     </android.support.v4.widget.NestedScrollView>
 

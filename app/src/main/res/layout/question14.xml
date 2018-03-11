@@ -1,20 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="16sp"
-    android:layout_marginTop="16sp"
     android:layout_marginRight="16sp"
+    android:layout_marginTop="16sp"
     android:background="@color/gray_BG"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_question13"
+        android:id="@+id/tv_question14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="16sp"
-        android:text="@string/question13"
+        android:text="@string/question14"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
 
@@ -30,10 +30,10 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!--QUESTION 13-01-->
+    <!--QUESTION 14-01-->
 
     <TextView
-        android:id="@+id/tv_question13_Q01"
+        android:id="@+id/tv_question14_Q01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -55,53 +55,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_01"
+        android:id="@+id/rg_14_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_01_1"
+            android:id="@+id/rb_14_01_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_01_2"
+            android:id="@+id/rb_14_01_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_01_3"
+            android:id="@+id/rb_14_01_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_01_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-02-->
+    <!--QUESTION 14-02-->
 
     <TextView
-        android:id="@+id/tv_question13_Q02"
+        android:id="@+id/tv_question14_Q02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -123,53 +111,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_02"
+        android:id="@+id/rg_14_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_02_1"
+            android:id="@+id/rb_14_02_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_02_2"
+            android:id="@+id/rb_14_02_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_02_3"
+            android:id="@+id/rb_14_02_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_02_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-03-->
+    <!--QUESTION 14-03-->
 
     <TextView
-        android:id="@+id/tv_question13_Q03"
+        android:id="@+id/tv_question14_Q03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -191,53 +167,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_03"
+        android:id="@+id/rg_14_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_03_1"
+            android:id="@+id/rb_14_03_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_03_2"
+            android:id="@+id/rb_14_03_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_03_3"
+            android:id="@+id/rb_14_03_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_03_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-04-->
+    <!--QUESTION 14-04-->
 
     <TextView
-        android:id="@+id/tv_question13_Q04"
+        android:id="@+id/tv_question14_Q04"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -259,53 +223,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_04"
+        android:id="@+id/rg_14_04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_04_1"
+            android:id="@+id/rb_14_04_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_04_2"
+            android:id="@+id/rb_14_04_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_04_3"
+            android:id="@+id/rb_14_04_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_04_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-05-->
+    <!--QUESTION 14-05-->
 
     <TextView
-        android:id="@+id/tv_question13_Q05"
+        android:id="@+id/tv_question14_Q05"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -327,53 +279,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_05"
+        android:id="@+id/rg_14_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_05_1"
+            android:id="@+id/rb_14_05_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_05_2"
+            android:id="@+id/rb_14_05_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_05_3"
+            android:id="@+id/rb_14_05_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_05_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-06-->
+    <!--QUESTION 14-06-->
 
     <TextView
-        android:id="@+id/tv_question13_Q06"
+        android:id="@+id/tv_question14_Q06"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -395,53 +335,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_06"
+        android:id="@+id/rg_14_06"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_06_1"
+            android:id="@+id/rb_14_06_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_06_2"
+            android:id="@+id/rb_14_06_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_06_3"
+            android:id="@+id/rb_14_06_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_06_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-07-->
+    <!--QUESTION 14-07-->
 
     <TextView
-        android:id="@+id/tv_question13_Q07"
+        android:id="@+id/tv_question14_Q07"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -463,53 +391,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_07"
+        android:id="@+id/rg_14_07"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_07_1"
+            android:id="@+id/rb_14_07_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_07_2"
+            android:id="@+id/rb_14_07_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_07_3"
+            android:id="@+id/rb_14_07_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_07_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-08-->
+    <!--QUESTION 14-08-->
 
     <TextView
-        android:id="@+id/tv_question13_Q08"
+        android:id="@+id/tv_question14_Q08"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -531,53 +447,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_08"
+        android:id="@+id/rg_14_08"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_08_1"
+            android:id="@+id/rb_14_08_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_08_2"
+            android:id="@+id/rb_14_08_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_08_3"
+            android:id="@+id/rb_14_08_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_08_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-09-->
+    <!--QUESTION 14-09-->
 
     <TextView
-        android:id="@+id/tv_question13_Q09"
+        android:id="@+id/tv_question14_Q09"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -599,53 +503,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_09"
+        android:id="@+id/rg_14_09"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_09_1"
+            android:id="@+id/rb_14_09_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_09_2"
+            android:id="@+id/rb_14_09_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_09_3"
+            android:id="@+id/rb_14_09_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_09_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-10-->
+    <!--QUESTION 14-10-->
 
     <TextView
-        android:id="@+id/tv_question13_Q10"
+        android:id="@+id/tv_question14_Q10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -667,53 +559,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_10"
+        android:id="@+id/rg_14_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_10_1"
+            android:id="@+id/rb_14_10_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_10_2"
+            android:id="@+id/rb_14_10_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_10_3"
+            android:id="@+id/rb_14_10_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_10_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor" />
-
-    <!--QUESTION 13-11-->
+    <!--QUESTION 14-11-->
 
     <TextView
-        android:id="@+id/tv_question13_Q11"
+        android:id="@+id/tv_question14_Q11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -735,53 +615,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_11"
+        android:id="@+id/rg_14_11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_11_1"
+            android:id="@+id/rb_14_11_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_11_2"
+            android:id="@+id/rb_14_11_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_11_3"
+            android:id="@+id/rb_14_11_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_11_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
-
-    <!--QUESTION 13-12-->
+    <!--QUESTION 14-12-->
 
     <TextView
-        android:id="@+id/tv_question13_Q12"
+        android:id="@+id/tv_question14_Q12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -803,53 +671,41 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_12"
+        android:id="@+id/rg_14_12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_12_1"
+            android:id="@+id/rb_14_12_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_12_2"
+            android:id="@+id/rb_14_12_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_12_3"
+            android:id="@+id/rb_14_12_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_12_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
-
-    <!--QUESTION 13-13-->
+    <!--QUESTION 14-13-->
 
     <TextView
-        android:id="@+id/tv_question13_Q13"
+        android:id="@+id/tv_question14_Q13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -871,53 +727,42 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_13"
+        android:id="@+id/rg_14_13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_13_1"
+            android:id="@+id/rb_14_13_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_13_2"
+            android:id="@+id/rb_14_13_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised"
+            tools:ignore="TooManyViews" />
 
         <RadioButton
-            android:id="@+id/rb_13_13_3"
+            android:id="@+id/rb_14_13_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_13_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
-
-    <!--QUESTION 13-14-->
+    <!--QUESTION 14-14-->
 
     <TextView
-        android:id="@+id/tv_question13_Q14"
+        android:id="@+id/tv_question14_Q14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -939,53 +784,42 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_14"
+        android:id="@+id/rg_14_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_14_1"
+            android:id="@+id/rb_14_14_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_14_2"
+            android:id="@+id/rb_14_14_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised"
+            tools:ignore="TooManyViews" />
 
         <RadioButton
-            android:id="@+id/rb_13_14_3"
+            android:id="@+id/rb_14_14_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_14_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
-
-    <!--QUESTION 13-15-->
+    <!--QUESTION 14-15-->
 
     <TextView
-        android:id="@+id/tv_question13_Q15"
+        android:id="@+id/tv_question14_Q15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -1007,53 +841,42 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_15"
+        android:id="@+id/rg_14_15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_15_1"
+            android:id="@+id/rb_14_15_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_15_2"
+            android:id="@+id/rb_14_15_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised"
+            tools:ignore="TooManyViews" />
 
         <RadioButton
-            android:id="@+id/rb_13_15_3"
+            android:id="@+id/rb_14_15_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/et_answer13_15_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
-
-    <!--QUESTION 13-16-->
+    <!--QUESTION 14-16-->
 
     <TextView
-        android:id="@+id/tv_question13_Q16"
+        android:id="@+id/tv_question14_Q16"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -1075,47 +898,36 @@
         android:textSize="15sp" />
 
     <RadioGroup
-        android:id="@+id/rg_13_16"
+        android:id="@+id/rg_14_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="16sp"
         android:layout_marginStart="16sp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_13_16_1"
+            android:id="@+id/rb_14_16_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/yes" />
+            android:text="@string/not_utilised" />
 
         <RadioButton
-            android:id="@+id/rb_13_16_2"
+            android:id="@+id/rb_14_16_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/no" />
+            android:text="@string/partially_utilised"
+            tools:ignore="TooManyViews" />
 
         <RadioButton
-            android:id="@+id/rb_13_16_3"
+            android:id="@+id/rb_14_16_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16sp"
-            android:text="@string/not_applicable" />
+            android:text="@string/fully_utilised" />
 
     </RadioGroup>
-
-    <EditText
-        android:id="@+id/et_answer13_16_inw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16sp"
-        android:layout_marginEnd="16sp"
-        android:layout_marginStart="16sp"
-        android:hint="@string/if_no_why"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        tools:ignore="LabelFor,TooManyViews" />
 
 </LinearLayout>

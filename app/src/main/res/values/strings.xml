@@ -39,18 +39,22 @@
     <!-- -&#45;&#45;&#45;&#45;-->
 
 
-
+    <string name="interview_schedule_for_the_field_survey">INTERVIEW SCHEDULE FOR THE FIELD SURVEY</string>
     <string name="i_socio_economic_status">I. SOCIO ECONOMIC STATUS</string>
 
+    <!--QUESTION 01-->
     <string name="question1">01. Name of the student</string>
 
+    <!--QUESTION 02-->
     <string name="question2">02. Age of the student</string>
 
+    <!--QUESTION 03-->
     <string name="question3">03. Gender</string>
     <string name="question3_rd1">Male</string>
     <string name="question3_rd2">Female</string>
     <string name="question3_rd3">Transgender</string>
 
+    <!--QUESTION 04-->
     <string name="question4">04. Caste</string>
     <string name="question4_rd1">OC</string>
     <string name="question4_rd2">BC</string>
@@ -58,10 +62,13 @@
     <string name="question4_rd4">SC</string>
     <string name="question4_rd5">ST</string>
 
+    <!--QUESTION 05-->
     <string name="question5">05. Current education / Education received</string>
 
+    <!--QUESTION 06-->
     <string name="question6">06. Place of the school</string>
 
+    <!--QUESTION 07-->
     <string name="question7">07. No of other school going children in the Family</string>
     <string name="child_1">Child 1</string>
     <string name="child_2">Child 2</string>
@@ -69,6 +76,7 @@
     <string name="others">Others</string>
     <string name="age">Age</string>
 
+    <!--QUESTION 08-->
     <string name="question8">08. Are there any school dropout in the family? (children)</string>
     <string name="question8_rd1">Yes</string>
     <string name="question8_rd2">No</string>
@@ -76,12 +84,14 @@
     <string name="male">Male (nos.)</string>
     <string name="female">Female (nos.)</string>
 
+    <!--QUESTION 09-->
     <string name="question9">09. Educational status of the parents</string>
     <string name="motherName">Mother Name</string>
     <string name="fatherName">Father Name</string>
     <string name="gaurdianName">Guardian Name</string>
     <string name="edStatus">Educational Status</string>
 
+    <!--QUESTION 10-->
     <string name="question10">10. Occupation and income of the parents and family members</string>
     <string name="question10note">(If employment is daily wage, ask for no. of days of work per week and then calculate monthly income)</string>
     <string name="father">FATHER :</string>
@@ -100,11 +110,13 @@
     <string name="weekly">Weekly</string>
     <string name="monthly">Monthly</string>
 
+    <!--QUESTION 11-->
     <string name="question11">11. Ownership of the house</string>
     <string name="question11_rd1">Own</string>
     <string name="question11_rd2">Rented</string>
     <string name="question11_rd3">Leased</string>
 
+    <!--QUESTION 12-->
     <string name="question12">12. Type of house?</string>
     <string name="question12_rd1">Hut</string>
     <string name="question12_rd2">Tiled</string>
@@ -112,6 +124,7 @@
 
     <string name="ii_utilization_of_the_student_welfare_schemes">II. UTILIZATION OF THE STUDENT WELFARE SCHEMES</string>
 
+    <!--QUESTION 13-->
     <string name="question13">13. Which are the following schemes you avail?</string>
     <string name="welfare_schemes">WELFARE SCHEMES :</string>
     <string name="yes">Yes</string>
@@ -144,4 +157,15 @@
     <string name="question13_14">14. Laptop</string>
     <string name="question13_15">15. Girls’ Incentive Scheme</string>
     <string name="question13_16">16. Financial assistance for students benefit of parental support</string>
+
+    <!--QUESTION 14-->
+    <string name="question14">14. Which is the level of utilization of the following schemes by you?</string>
+    <string name="not_utilised">Not Utilised</string>
+    <string name="partially_utilised">Partially Utilised</string>
+    <string name="fully_utilised">Fully Utilised</string>
+
+    <!--QUESTION 15-->
+    <string name="question15">15. ORDER or RANK the following schemes based on the utility of the scheme to you.</string>
+    <string name="question15note">(Give 1 to most useful scheme and continue)</string>
+    <string name="order_rank_1_to_16">Order / Rank [1 to 16]</string>
 </resources>

@@ -161,6 +161,16 @@
 
         <include layout="@layout/question15" />
 
+        <include layout="@layout/question16" />
+
+        <include layout="@layout/question17" />
+
+        <include layout="@layout/question18" />
+
+        <include layout="@layout/question19" />
+
+        <include layout="@layout/question20" />
+
     </LinearLayout>
 
     <Button

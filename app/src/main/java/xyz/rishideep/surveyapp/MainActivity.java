@@ -151,6 +151,33 @@ public class MainActivity extends AppCompatActivity {
     EditText et_answer15_01_or, et_answer15_02_or, et_answer15_03_or, et_answer15_04_or, et_answer15_05_or, et_answer15_06_or, et_answer15_07_or, et_answer15_08_or, et_answer15_09_or, et_answer15_10_or, et_answer15_11_or, et_answer15_12_or, et_answer15_13_or, et_answer15_14_or, et_answer15_15_or, et_answer15_16_or;
     String et_answer15_01_or_String, et_answer15_02_or_String, et_answer15_03_or_String, et_answer15_04_or_String, et_answer15_05_or_String, et_answer15_06_or_String, et_answer15_07_or_String, et_answer15_08_or_String, et_answer15_09_or_String, et_answer15_10_or_String, et_answer15_11_or_String, et_answer15_12_or_String, et_answer15_13_or_String, et_answer15_14_or_String, et_answer15_15_or_String, et_answer15_16_or_String;
 
+    //  init. for QUESTION 16
+    TextView tv_question16;
+    EditText et_answer16;
+    String tv_question16_StringEncode, et_answer16_String;
+
+    //  init. for QUESTION 17
+    TextView tv_question17;
+    EditText et_answer17;
+    String tv_question17_StringEncode, et_answer17_String;
+
+    //  init. for QUESTION 18
+    TextView tv_question18;
+    EditText et_answer18;
+    String tv_question18_StringEncode, et_answer18_String;
+
+    //  init. for QUESTION 19
+    TextView tv_question19;
+    RadioGroup rg_19;
+    EditText et_answer19_why;
+    String tv_question19_StringEncode, rb_answer19_String, et_answer19_why_String;
+
+    //  init. for QUESTION 20
+    TextView tv_question20;
+    RadioGroup rg_20;
+    EditText et_answer20_mi;
+    String tv_question20_StringEncode, rb_answer20_String, et_answer20_mi_String;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -187,10 +214,15 @@ public class MainActivity extends AppCompatActivity {
                 question13();   //  13. WHICH ARE THE FOLLOWING SCHEMES YOU AVAIL
                 question14();   //  14. WHICH IS THE LEVEL OF UTILIZATION OF THE FOLLOWING SCHEMES BY YOU
                 question15();   //  15. ORDER OR RANK THE FOLLOWING SCHEMES BASED ON THE UTILITY OF THE SCHEME TO YOU
+                question16();   //  16. AMONG THE AVAILED SCHEMES, WHICH SCHEMES WERE VERY RELEVANT / USEFUL
+                question17();   //  17. AMONG THESE, WHICH SCHEMES WERE MORE SUPPORTIVE TO CONTINUE YOUR SCHOOLING
+                question18();   //  18. AMONG THE AVAILED SCHEMES, WHICH SCHEMES WERE COMPLETELY UTILISED BY YOU
+                question19();   //  19. HAVE YOU NOT COMPLETELY UTILIZED ANY OF TH SCHEMES
+                question20();   //  20. ARE THERE ANY SCHEME WHICH IS BENEFITING THE FAMILY MEMBERS OTHER THAN YOU
             }
         });
 
-        //  I. SOCIO ECONOMIC STATUS
+        //  (ARROW)  I. SOCIO ECONOMIC STATUS
         iv_i_socio_economic_status_01 = findViewById(R.id.iv_i_socio_economic_status_01);
         iv_i_socio_economic_status_02 = findViewById(R.id.iv_i_socio_economic_status_02);
 
@@ -217,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //  II. UTILIZATION OF THE STUDENT WELFARE SCHEMES
+        //  (ARROW)  II. UTILIZATION OF THE STUDENT WELFARE SCHEMES
         iv_tv_ii_utilization_of_the_student_welfare_schemes_01 = findViewById(R.id.iv_tv_ii_utilization_of_the_student_welfare_schemes_01);
         iv_tv_ii_utilization_of_the_student_welfare_schemes_02 = findViewById(R.id.iv_tv_ii_utilization_of_the_student_welfare_schemes_02);
 
@@ -245,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //  I. SOCIO ECONOMIC STATUS
     void question01() {
         tv_question1 = findViewById(R.id.tv_question1);
         tv_question1_StringEncode = EncodeString(tv_question1.getText().toString());
@@ -720,6 +753,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //  II. UTILIZATION OF THE STUDENT WELFARE SCHEMES
     void question13() {
         tv_question13 = findViewById(R.id.tv_question13);
         tv_question13_StringEncode = EncodeString(tv_question13.getText().toString());
@@ -1564,6 +1598,98 @@ public class MainActivity extends AppCompatActivity {
             databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q16_StringEncode).child("Order , Rank (1 to 16)").setValue("");
         } else {
             databaseReference.child(tv_question15_StringEncode).child(tv_question15_Q16_StringEncode).child("Order , Rank (1 to 16)").setValue(et_answer15_16_or_String);
+        }
+    }
+
+    void question16() {
+        tv_question16 = findViewById(R.id.tv_question16);
+        tv_question16_StringEncode = EncodeString(tv_question16.getText().toString());
+
+        //  AMONG THE AVAILED SCHEMES, WHICH SCHEMES WERE VERY RELEVANT / USEFUL
+        et_answer16 = findViewById(R.id.et_answer16);
+        et_answer16_String = et_answer16.getText().toString();
+        if (et_answer16_String.isEmpty()) {
+            databaseReference.child(tv_question16_StringEncode).setValue("");
+        } else {
+            databaseReference.child(tv_question16_StringEncode).setValue(et_answer16_String);
+        }
+    }
+
+    void question17() {
+        tv_question17 = findViewById(R.id.tv_question17);
+        tv_question17_StringEncode = EncodeString(tv_question17.getText().toString());
+
+        //  AMONG THESE, WHICH SCHEMES WERE MORE SUPPORTIVE TO CONTINUE YOUR SCHOOLING
+        et_answer17 = findViewById(R.id.et_answer17);
+        et_answer17_String = et_answer17.getText().toString();
+        if (et_answer17_String.isEmpty()) {
+            databaseReference.child(tv_question17_StringEncode).setValue("");
+        } else {
+            databaseReference.child(tv_question17_StringEncode).setValue(et_answer17_String);
+        }
+    }
+
+    void question18() {
+        tv_question18 = findViewById(R.id.tv_question18);
+        tv_question18_StringEncode = EncodeString(tv_question18.getText().toString());
+
+        //  AMONG THE AVAILED SCHEMES, WHICH SCHEMES WERE COMPLETELY UTILISED BY YOU
+        et_answer18 = findViewById(R.id.et_answer18);
+        et_answer18_String = et_answer18.getText().toString();
+        if (et_answer18_String.isEmpty()) {
+            databaseReference.child(tv_question18_StringEncode).setValue("");
+        } else {
+            databaseReference.child(tv_question18_StringEncode).setValue(et_answer18_String);
+        }
+    }
+
+    void question19() {
+        tv_question19 = findViewById(R.id.tv_question19);
+        tv_question19_StringEncode = EncodeString(tv_question19.getText().toString());
+
+        //  YES (or) NO
+        rg_19 = findViewById(R.id.rg_19);
+        if (rg_19.getCheckedRadioButtonId() != -1) {
+            int selectedId19 = rg_19.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId19);
+            rb_answer19_String = radioButton.getText().toString();
+            databaseReference.child(tv_question19_StringEncode).child("Yes (or) No").setValue(rb_answer19_String);
+        } else {
+            databaseReference.child(tv_question19_StringEncode).child("Yes (or) No").setValue("");
+        }
+
+        //  Why?
+        et_answer19_why = findViewById(R.id.et_answer19_why);
+        et_answer19_why_String = et_answer19_why.getText().toString();
+        if (et_answer19_why_String.isEmpty()) {
+            databaseReference.child(tv_question19_StringEncode).child("Why?").setValue("");
+        } else {
+            databaseReference.child(tv_question19_StringEncode).child("Why?").setValue(et_answer19_why_String);
+        }
+    }
+
+    void question20() {
+        tv_question20 = findViewById(R.id.tv_question20);
+        tv_question20_StringEncode = EncodeString(tv_question20.getText().toString());
+
+        //  YES (or) NO
+        rg_20 = findViewById(R.id.rg_20);
+        if (rg_20.getCheckedRadioButtonId() != -1) {
+            int selectedId20 = rg_20.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId20);
+            rb_answer20_String = radioButton.getText().toString();
+            databaseReference.child(tv_question20_StringEncode).child("Yes (or) No").setValue(rb_answer20_String);
+        } else {
+            databaseReference.child(tv_question20_StringEncode).child("Yes (or) No").setValue("");
+        }
+
+        //  Why?
+        et_answer20_mi = findViewById(R.id.et_answer20_mi);
+        et_answer20_mi_String = et_answer20_mi.getText().toString();
+        if (et_answer20_mi_String.isEmpty()) {
+            databaseReference.child(tv_question20_StringEncode).child("Mention it").setValue("");
+        } else {
+            databaseReference.child(tv_question20_StringEncode).child("Mention it").setValue(et_answer20_mi_String);
         }
     }
 

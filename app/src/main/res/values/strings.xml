@@ -78,9 +78,9 @@
 
     <!--QUESTION 08-->
     <string name="question8">08. Are there any school dropout in the family? (children)</string>
-    <string name="question8_rd1">Yes</string>
-    <string name="question8_rd2">No</string>
-    <string name="question8_2">If yes,</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="if_yes">If yes,</string>
     <string name="male">Male (nos.)</string>
     <string name="female">Female (nos.)</string>
 
@@ -127,8 +127,6 @@
     <!--QUESTION 13-->
     <string name="question13">13. Which are the following schemes you avail?</string>
     <string name="welfare_schemes">WELFARE SCHEMES :</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
     <string name="not_applicable">Not Applicable</string>
     <string name="if_no_why">If no, why?</string>
     <string name="for_all_students">(For all students)</string>
@@ -168,4 +166,19 @@
     <string name="question15">15. ORDER or RANK the following schemes based on the utility of the scheme to you.</string>
     <string name="question15note">(Give 1 to most useful scheme and continue)</string>
     <string name="order_rank_1_to_16">Order / Rank [1 to 16]</string>
+
+    <!--QUESTION 16-->
+    <string name="question16">16. Among the availed schemes, which schemes were very relevant / useful?</string>
+
+    <!--QUESTION 17-->
+    <string name="question17">17. Among these, which schemes were more supportive to continue your schooling?</string>
+
+    <!--QUESTION 18-->
+    <string name="question18">18. Among the availed schemes, which schemes were completely utilized by you?</string>
+
+    <!--QUESTION 19-->
+    <string name="question19">19. Have you not completely utilized any of the schemes?</string>
+    <string name="why">Why?</string>
+    <string name="question20">20. Are there any scheme which is benefiting the family members other than you?</string>
+    <string name="mention_it">Mention it</string>
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16sp"
+    android:layout_marginRight="16sp"
+    android:layout_marginTop="16sp"
+    android:background="@color/gray_BG"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_question17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="16sp"
+        android:text="@string/question17"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_answer17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        tools:ignore="LabelFor" />
+
+</LinearLayout>

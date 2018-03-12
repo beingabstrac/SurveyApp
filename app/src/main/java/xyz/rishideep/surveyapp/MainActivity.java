@@ -196,9 +196,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et_answer1_String = et_answer1.getText().toString();
-                databaseReference = firebaseDatabase.getReference(android_id).child(et_answer1_String);
+                databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).child(et_answer1_String);
                 if (et_answer1_String.isEmpty() || et_answer1_String.length() == 0 || et_answer1_String.equals("") || et_answer1_String == null) {
-                    databaseReference = firebaseDatabase.getReference(android_id).push();
+                    databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).push();
                 }
 
                 //  meth. for QUESTIONS

@@ -1,11 +1,10 @@
 package xyz.rishideep.surveyapp;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,18 +17,18 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import xyz.rishideep.surveyapp.Auth.AccountSettings;
-
 public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    String android_id;
     Button bt_submit;
     RadioButton radioButton;
 
     ImageView iv_i_socio_economic_status_01, iv_i_socio_economic_status_02, iv_tv_ii_utilization_of_the_student_welfare_schemes_01, iv_tv_ii_utilization_of_the_student_welfare_schemes_02;
     LinearLayout ll_i_socio_economic_status, ll_ii_utilization_of_the_student_welfare_schemes;
 
+    //  init. for QUESTIONS
     //  init. for QUESTION 1
     TextView tv_question1;
     EditText et_answer1;
@@ -178,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
     EditText et_answer20_mi;
     String tv_question20_StringEncode, rb_answer20_String, et_answer20_mi_String;
 
+    @SuppressLint("HardwareIds")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -188,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
+        android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
         et_answer1 = findViewById(R.id.et_answer1);
 
         bt_submit = findViewById(R.id.bt_submit);
@@ -195,10 +196,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et_answer1_String = et_answer1.getText().toString();
-                databaseReference = firebaseDatabase.getReference(et_answer1_String);
+                databaseReference = firebaseDatabase.getReference(android_id).child(et_answer1_String);
                 if (et_answer1_String.isEmpty() || et_answer1_String.length() == 0 || et_answer1_String.equals("") || et_answer1_String == null) {
-                    databaseReference = firebaseDatabase.getReference().push();
+                    databaseReference = firebaseDatabase.getReference(android_id).push();
                 }
+
+                //  meth. for QUESTIONS
                 question01();   //  01. NAME OF THE STUDENT
                 question02();   //  02. AGE OF THE STUDENT
                 question03();   //  03. GENDER
@@ -1695,24 +1698,5 @@ public class MainActivity extends AppCompatActivity {
 
     public static String EncodeString(String string) {
         return string.replaceAll("[./]", ",");
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.account_settings) {
-            Intent intent = new Intent(MainActivity.this, AccountSettings.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

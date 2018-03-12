@@ -4,6 +4,7 @@
     package="xyz.rishideep.surveyapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,28 +18,13 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Auth.LoginActivity"
-            android:theme="@style/Auth"
-            tools:ignore="InnerclassSeparator">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Auth.SignupActivity"
-            android:theme="@style/Auth"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Auth.ResetPasswordActivity"
-            android:theme="@style/Auth"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Auth.AccountSettings"
-            tools:ignore="InnerclassSeparator" />
     </application>
 
 </manifest>

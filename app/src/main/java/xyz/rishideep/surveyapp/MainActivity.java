@@ -3,6 +3,7 @@ package xyz.rishideep.surveyapp;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     String android_id;
     Button bt_submit;
     RadioButton radioButton;
+    LinearLayout linearLayout;
 
     ImageView iv_i_socio_economic_status_01, iv_i_socio_economic_status_02, iv_tv_ii_utilization_of_the_student_welfare_schemes_01, iv_tv_ii_utilization_of_the_student_welfare_schemes_02, iv_tv_iii_socio_economic_growth_of_family_01, iv_tv_iii_socio_economic_growth_of_family_02;
     LinearLayout ll_i_socio_economic_status, ll_ii_utilization_of_the_student_welfare_schemes, ll_iii_socio_economic_growth_of_family;
@@ -213,12 +215,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
         et_answer1 = findViewById(R.id.et_answer1);
@@ -228,10 +231,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et_answer1_String = et_answer1.getText().toString();
-                databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).child(et_answer1_String);
+                databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " (" + android_id + ")").child(et_answer1_String);
                 databaseReference.keepSynced(true);
                 if (et_answer1_String.isEmpty() || et_answer1_String.length() == 0 || et_answer1_String.equals("") || et_answer1_String == null) {
-                    databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).push();
+                    databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " (" + android_id + ")").push();
                     databaseReference.keepSynced(true);
                 }
 
@@ -262,9 +265,15 @@ public class MainActivity extends AppCompatActivity {
                 question24();   //  24. HOW DOES THE SCHEME HELP THE PARENTS OTHER THAN ECONOMICAL ASPECT
                 question25();   //  25. HOW DID YOU UTILIZE THE SAVED MONEY BECAUSE OF THESE SCHEMES
                 question26();   //  26. DID THE SCHEMES IMPROVE YOUR FAMILY STATUS
+
+                bt_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                bt_submit.setText(getString(R.string.submitted));
+                linearLayout = findViewById(R.id.ll_item);
+                Snackbar.make(linearLayout, "All the data has been successfully saved!", Snackbar.LENGTH_LONG).show();
             }
         });
 
+        //  ARROW
         //  (ARROW)  I. SOCIO ECONOMIC STATUS
         iv_i_socio_economic_status_01 = findViewById(R.id.iv_i_socio_economic_status_01);
         iv_i_socio_economic_status_02 = findViewById(R.id.iv_i_socio_economic_status_02);
@@ -357,8 +366,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer1_String = et_answer1.getText().toString();
         if (et_answer1_String.isEmpty()) {
             databaseReference.child(tv_question1_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question1_StringEncode).setValue(et_answer1_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -371,8 +382,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer2_String = et_answer2.getText().toString();
         if (et_answer2_String.isEmpty()) {
             databaseReference.child(tv_question2_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question2_StringEncode).setValue(et_answer2_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -387,8 +400,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId3);
             rb_answer3_String = radioButton.getText().toString();
             databaseReference.child(tv_question3_StringEncode).setValue(rb_answer3_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question3_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -403,8 +418,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId4);
             rb_answer4_String = radioButton.getText().toString();
             databaseReference.child(tv_question4_StringEncode).setValue(rb_answer4_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question4_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -417,8 +434,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer5_String = et_answer5.getText().toString();
         if (et_answer5_String.isEmpty()) {
             databaseReference.child(tv_question5_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question5_StringEncode).setValue(et_answer5_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -431,8 +450,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer6_String = et_answer6.getText().toString();
         if (et_answer6_String.isEmpty()) {
             databaseReference.child(tv_question6_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question6_StringEncode).setValue(et_answer6_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -445,8 +466,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_child1_String = et_answer7_child1.getText().toString();
         if (et_answer7_child1_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 1").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 1").child("Name").setValue(et_answer7_child1_String);
+            databaseReference.keepSynced(true);
         }
 
         //  AGE (CHILD 1)
@@ -454,8 +477,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_age1_String = et_answer7_age1.getText().toString();
         if (et_answer7_age1_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 1").child("Age").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 1").child("Age").setValue(et_answer7_age1_String);
+            databaseReference.keepSynced(true);
         }
 
         //  CHILD 2
@@ -463,8 +488,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_child2_String = et_answer7_child2.getText().toString();
         if (et_answer7_child2_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 2").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 2").child("Name").setValue(et_answer7_child2_String);
+            databaseReference.keepSynced(true);
         }
 
         //  AGE (CHILD 2)
@@ -472,8 +499,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_age2_String = et_answer7_age2.getText().toString();
         if (et_answer7_age2_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 2").child("Age").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 2").child("Age").setValue(et_answer7_age2_String);
+            databaseReference.keepSynced(true);
         }
 
         //  CHILD 3
@@ -481,8 +510,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_child3_String = et_answer7_child3.getText().toString();
         if (et_answer7_child3_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 3").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 3").child("Name").setValue(et_answer7_child3_String);
+            databaseReference.keepSynced(true);
         }
 
         //  AGE (CHILD 3)
@@ -490,8 +521,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_age3_String = et_answer7_age3.getText().toString();
         if (et_answer7_age3_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Child 3").child("Age").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Child 3").child("Age").setValue(et_answer7_age3_String);
+            databaseReference.keepSynced(true);
         }
 
         //  OTHERS
@@ -499,8 +532,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_others_String = et_answer7_others.getText().toString();
         if (et_answer7_others_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Others").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Others").child("Name").setValue(et_answer7_others_String);
+            databaseReference.keepSynced(true);
         }
 
         //  AGE (OTHERS)
@@ -508,8 +543,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer7_ageOthers_String = et_answer7_ageOthers.getText().toString();
         if (et_answer7_ageOthers_String.isEmpty()) {
             databaseReference.child(tv_question7_StringEncode).child("Others").child("Age").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question7_StringEncode).child("Others").child("Age").setValue(et_answer7_ageOthers_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -524,8 +561,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId8);
             rb_answer8_String = radioButton.getText().toString();
             databaseReference.child(tv_question8_StringEncode).child("Yes (or) No").setValue(rb_answer8_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question8_StringEncode).child("Yes (or) No").setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MALE (nos.)
@@ -533,8 +572,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer8_male_String = et_answer8_male.getText().toString();
         if (et_answer8_male_String.isEmpty()) {
             databaseReference.child(tv_question8_StringEncode).child("Male (nos)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question8_StringEncode).child("Male (nos)").setValue(et_answer8_male_String);
+            databaseReference.keepSynced(true);
         }
 
         //  FEMALE (nos.)
@@ -542,8 +583,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer8_female_String = et_answer8_female.getText().toString();
         if (et_answer8_female_String.isEmpty()) {
             databaseReference.child(tv_question8_StringEncode).child("Female (nos)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question8_StringEncode).child("Female (nos)").setValue(et_answer8_female_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -556,8 +599,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_motherName_String = et_answer9_motherName.getText().toString();
         if (et_answer9_motherName_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Mother").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Mother").child("Name").setValue(et_answer9_motherName_String);
+            databaseReference.keepSynced(true);
         }
 
         //  EDUCATIONAL STATUS (MOTHER)
@@ -565,8 +610,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_edStatusMN_String = et_answer9_edStatusMN.getText().toString();
         if (et_answer9_edStatusMN_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Mother").child("Educational Status").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Mother").child("Educational Status").setValue(et_answer9_edStatusMN_String);
+            databaseReference.keepSynced(true);
         }
 
         //  FATHER NAME
@@ -574,8 +621,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_fatherName_String = et_answer9_fatherName.getText().toString();
         if (et_answer9_fatherName_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Father").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Father").child("Name").setValue(et_answer9_fatherName_String);
+            databaseReference.keepSynced(true);
         }
 
         //  EDUCATIONAL STATUS (FATHER)
@@ -583,8 +632,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_edStatusFN_String = et_answer9_edStatusFN.getText().toString();
         if (et_answer9_edStatusFN_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Father").child("Educational Status").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Father").child("Educational Status").setValue(et_answer9_edStatusFN_String);
+            databaseReference.keepSynced(true);
         }
 
         //  GUARDIAN NAME
@@ -592,8 +643,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_gaurdianName_String = et_answer9_gaurdianName.getText().toString();
         if (et_answer9_gaurdianName_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Guardian").child("Name").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Guardian").child("Name").setValue(et_answer9_gaurdianName_String);
+            databaseReference.keepSynced(true);
         }
 
         //  EDUCATIONAL STATUS (FATHER)
@@ -601,8 +654,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer9_edStatusGN_String = et_answer9_edStatusGN.getText().toString();
         if (et_answer9_edStatusGN_String.isEmpty()) {
             databaseReference.child(tv_question9_StringEncode).child("Guardian").child("Educational Status").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question9_StringEncode).child("Guardian").child("Educational Status").setValue(et_answer9_edStatusGN_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -620,8 +675,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_father_noe_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Father").child(tv_question10_father_noe_StringEncode).setValue(rb_answer10_father_noe_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Father").child(tv_question10_father_noe_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  SALARY MODE
@@ -633,8 +690,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_father_sm_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Father").child(tv_question10_father_sm_StringEncode).setValue(rb_answer10_father_sm_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Father").child(tv_question10_father_sm_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MONTHLY INCOME
@@ -642,8 +701,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer10_father_mi_String = et_answer10_father_mi.getText().toString();
         if (et_answer10_father_mi_String.isEmpty()) {
             databaseReference.child(tv_question10_StringEncode).child("Father").child("Monthly Income (Rs)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Father").child("Monthly Income (Rs)").setValue(et_answer10_father_mi_String);
+            databaseReference.keepSynced(true);
         }
 
         //  MOTHER
@@ -656,8 +717,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_mother_noe_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Mother").child(tv_question10_mother_noe_StringEncode).setValue(rb_answer10_mother_noe_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Mother").child(tv_question10_mother_noe_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  SALARY MODE
@@ -669,8 +732,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_mother_sm_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Mother").child(tv_question10_mother_sm_StringEncode).setValue(rb_answer10_mother_sm_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Mother").child(tv_question10_mother_sm_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MONTHLY INCOME
@@ -678,8 +743,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer10_mother_mi_String = et_answer10_mother_mi.getText().toString();
         if (et_answer10_mother_mi_String.isEmpty()) {
             databaseReference.child(tv_question10_StringEncode).child("Mother").child("Monthly Income (Rs)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Mother").child("Monthly Income (Rs)").setValue(et_answer10_mother_mi_String);
+            databaseReference.keepSynced(true);
         }
 
         //  PERSON1
@@ -692,8 +759,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person1_noe_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child(tv_question10_person1_noe_StringEncode).setValue(rb_answer10_person1_noe_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child(tv_question10_person1_noe_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  SALARY MODE
@@ -705,8 +774,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person1_sm_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child(tv_question10_person1_sm_StringEncode).setValue(rb_answer10_person1_sm_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child(tv_question10_person1_sm_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MONTHLY INCOME
@@ -714,8 +785,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer10_person1_mi_String = et_answer10_person1_mi.getText().toString();
         if (et_answer10_person1_mi_String.isEmpty()) {
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child("Monthly Income (Rs)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 1").child("Monthly Income (Rs)").setValue(et_answer10_person1_mi_String);
+            databaseReference.keepSynced(true);
         }
 
         //  PERSON2
@@ -728,8 +801,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person2_noe_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child(tv_question10_person2_noe_StringEncode).setValue(rb_answer10_person2_noe_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child(tv_question10_person2_noe_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  SALARY MODE
@@ -741,8 +816,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person2_sm_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child(tv_question10_person2_sm_StringEncode).setValue(rb_answer10_person2_sm_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child(tv_question10_person2_sm_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MONTHLY INCOME
@@ -750,8 +827,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer10_person2_mi_String = et_answer10_person2_mi.getText().toString();
         if (et_answer10_person2_mi_String.isEmpty()) {
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child("Monthly Income (Rs)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 2").child("Monthly Income (Rs)").setValue(et_answer10_person2_mi_String);
+            databaseReference.keepSynced(true);
         }
 
         //  PERSON3
@@ -764,8 +843,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person3_noe_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child(tv_question10_person3_noe_StringEncode).setValue(rb_answer10_person3_noe_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child(tv_question10_person3_noe_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  SALARY MODE
@@ -777,8 +858,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId10);
             rb_answer10_person3_sm_String = radioButton.getText().toString();
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child(tv_question10_person3_sm_StringEncode).setValue(rb_answer10_person3_sm_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child(tv_question10_person3_sm_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MONTHLY INCOME
@@ -786,8 +869,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer10_person3_mi_String = et_answer10_person3_mi.getText().toString();
         if (et_answer10_person3_mi_String.isEmpty()) {
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child("Monthly Income (Rs)").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question10_StringEncode).child("Person 3").child("Monthly Income (Rs)").setValue(et_answer10_person3_mi_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -802,8 +887,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId11);
             rb_answer11_String = radioButton.getText().toString();
             databaseReference.child(tv_question11_StringEncode).setValue(rb_answer11_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question11_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -818,8 +905,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId12);
             rb_answer12_String = radioButton.getText().toString();
             databaseReference.child(tv_question12_StringEncode).setValue(rb_answer12_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question12_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1775,8 +1864,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId21);
             rb_answer21_String = radioButton.getText().toString();
             databaseReference.child(tv_question21_StringEncode).child("Yes (or) No").setValue(rb_answer21_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question21_StringEncode).child("Yes (or) No").setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  MENTION HOW?
@@ -1784,8 +1875,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer21_mh_String = et_answer21_mh.getText().toString();
         if (et_answer21_mh_String.isEmpty()) {
             databaseReference.child(tv_question21_StringEncode).child("Mention how?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question21_StringEncode).child("Mention how?").setValue(et_answer21_mh_String);
+            databaseReference.keepSynced(true);
         }
 
         //  WHY?
@@ -1793,8 +1886,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer21_why_String = et_answer21_why.getText().toString();
         if (et_answer21_why_String.isEmpty()) {
             databaseReference.child(tv_question21_StringEncode).child("Why?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question21_StringEncode).child("Why?").setValue(et_answer21_why_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1807,8 +1902,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer22_hm_String = et_answer22_hm.getText().toString();
         if (et_answer22_hm_String.isEmpty()) {
             databaseReference.child(tv_question22_StringEncode).child("How much are you saving per year?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question22_StringEncode).child("How much are you saving per year?").setValue(et_answer22_hm_String);
+            databaseReference.keepSynced(true);
         }
 
         //  WHY?
@@ -1816,8 +1913,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer22_why_String = et_answer22_why.getText().toString();
         if (et_answer22_why_String.isEmpty()) {
             databaseReference.child(tv_question22_StringEncode).child("Why?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question22_StringEncode).child("Why?").setValue(et_answer22_why_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1832,8 +1931,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId23);
             rb_answer23_String = radioButton.getText().toString();
             databaseReference.child(tv_question23_StringEncode).child("Yes (or) No").setValue(rb_answer23_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question23_StringEncode).child("Yes (or) No").setValue("");
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1846,8 +1947,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer24_String = et_answer24.getText().toString();
         if (et_answer24_String.isEmpty()) {
             databaseReference.child(tv_question24_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question24_StringEncode).setValue(et_answer24_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1860,8 +1963,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer25_String = et_answer25.getText().toString();
         if (et_answer25_String.isEmpty()) {
             databaseReference.child(tv_question25_StringEncode).setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question25_StringEncode).setValue(et_answer25_String);
+            databaseReference.keepSynced(true);
         }
     }
 
@@ -1876,8 +1981,10 @@ public class MainActivity extends AppCompatActivity {
             radioButton = findViewById(selectedId26);
             rb_answer26_String = radioButton.getText().toString();
             databaseReference.child(tv_question26_StringEncode).child("Yes (or) No").setValue(rb_answer26_String);
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question26_StringEncode).child("Yes (or) No").setValue("");
+            databaseReference.keepSynced(true);
         }
 
         //  HOW?
@@ -1885,8 +1992,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer26_how_String = et_answer26_how.getText().toString();
         if (et_answer26_how_String.isEmpty()) {
             databaseReference.child(tv_question26_StringEncode).child("How?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question26_StringEncode).child("How?").setValue(et_answer26_how_String);
+            databaseReference.keepSynced(true);
         }
 
         //  WHY?
@@ -1894,8 +2003,10 @@ public class MainActivity extends AppCompatActivity {
         et_answer26_why_String = et_answer26_why.getText().toString();
         if (et_answer26_why_String.isEmpty()) {
             databaseReference.child(tv_question26_StringEncode).child("Why?").setValue("");
+            databaseReference.keepSynced(true);
         } else {
             databaseReference.child(tv_question26_StringEncode).child("Why?").setValue(et_answer26_why_String);
+            databaseReference.keepSynced(true);
         }
     }
 

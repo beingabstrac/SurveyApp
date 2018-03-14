@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Survey App</string>
+    <string name="author">\u00A9 2018 Rishi Deep - Amrita Vishwa Vidyapeetham</string>
     <string name="submit">SUBMIT</string>
+    <string name="submitted">SUBMITTED</string>
 
     <string name="interview_schedule_for_the_field_survey">INTERVIEW SCHEDULE FOR THE FIELD SURVEY</string>
     <string name="i_socio_economic_status">I. SOCIO ECONOMIC STATUS</string>

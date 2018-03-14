@@ -173,6 +173,75 @@
 
     </LinearLayout>
 
+    <!--II. UTILIZATION OF THE STUDENT WELFARE SCHEMES-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16sp"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_iii_socio_economic_growth_of_family"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".9"
+            android:padding="16sp"
+            android:text="@string/iii_socio_economic_growth_of_family"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16sp"
+            android:layout_weight=".1">
+
+            <ImageView
+                android:id="@+id/iv_tv_iii_socio_economic_growth_of_family_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_tv_iii_socio_economic_growth_of_family_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_arrow_drop_up_black_24dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_iii_socio_economic_growth_of_family"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/question21" />
+
+        <include layout="@layout/question22" />
+
+        <include layout="@layout/question23" />
+
+        <include layout="@layout/question24" />
+
+        <include layout="@layout/question25" />
+
+        <include layout="@layout/question26" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/bt_submit"
         android:layout_width="match_parent"

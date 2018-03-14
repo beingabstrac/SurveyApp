@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
     Button bt_submit;
     RadioButton radioButton;
 
-    ImageView iv_i_socio_economic_status_01, iv_i_socio_economic_status_02, iv_tv_ii_utilization_of_the_student_welfare_schemes_01, iv_tv_ii_utilization_of_the_student_welfare_schemes_02;
-    LinearLayout ll_i_socio_economic_status, ll_ii_utilization_of_the_student_welfare_schemes;
+    ImageView iv_i_socio_economic_status_01, iv_i_socio_economic_status_02, iv_tv_ii_utilization_of_the_student_welfare_schemes_01, iv_tv_ii_utilization_of_the_student_welfare_schemes_02, iv_tv_iii_socio_economic_growth_of_family_01, iv_tv_iii_socio_economic_growth_of_family_02;
+    LinearLayout ll_i_socio_economic_status, ll_ii_utilization_of_the_student_welfare_schemes, ll_iii_socio_economic_growth_of_family;
 
     //  init. for QUESTIONS
     //  init. for QUESTION 1
@@ -177,6 +177,38 @@ public class MainActivity extends AppCompatActivity {
     EditText et_answer20_mi;
     String tv_question20_StringEncode, rb_answer20_String, et_answer20_mi_String;
 
+    //  init. for QUESTION 21
+    TextView tv_question21;
+    RadioGroup rg_21;
+    EditText et_answer21_mh, et_answer21_why;
+    String tv_question21_StringEncode, rb_answer21_String, et_answer21_mh_String, et_answer21_why_String;
+
+    //  init. for QUESTION 22
+    TextView tv_question22;
+    EditText et_answer22_hm, et_answer22_why;
+    String tv_question22_StringEncode, et_answer22_hm_String, et_answer22_why_String;
+
+    //  init. for QUESTION 23
+    TextView tv_question23;
+    RadioGroup rg_23;
+    String tv_question23_StringEncode, rb_answer23_String;
+
+    //  init. for QUESTION 24
+    TextView tv_question24;
+    EditText et_answer24;
+    String tv_question24_StringEncode, et_answer24_String;
+
+    //  init. for QUESTION 25
+    TextView tv_question25;
+    EditText et_answer25;
+    String tv_question25_StringEncode, et_answer25_String;
+
+    //  init. for QUESTION 26
+    TextView tv_question26;
+    RadioGroup rg_26;
+    EditText et_answer26_how, et_answer26_why;
+    String tv_question26_StringEncode, rb_answer26_String, et_answer26_how_String, et_answer26_why_String;
+
     @SuppressLint("HardwareIds")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -197,8 +229,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 et_answer1_String = et_answer1.getText().toString();
                 databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).child(et_answer1_String);
+                databaseReference.keepSynced(true);
                 if (et_answer1_String.isEmpty() || et_answer1_String.length() == 0 || et_answer1_String.equals("") || et_answer1_String == null) {
                     databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " - " + android_id).push();
+                    databaseReference.keepSynced(true);
                 }
 
                 //  meth. for QUESTIONS
@@ -222,6 +256,12 @@ public class MainActivity extends AppCompatActivity {
                 question18();   //  18. AMONG THE AVAILED SCHEMES, WHICH SCHEMES WERE COMPLETELY UTILISED BY YOU
                 question19();   //  19. HAVE YOU NOT COMPLETELY UTILIZED ANY OF TH SCHEMES
                 question20();   //  20. ARE THERE ANY SCHEME WHICH IS BENEFITING THE FAMILY MEMBERS OTHER THAN YOU
+                question21();   //  21. HAVE YOU ECONOMICALLY BENEFITED BY AVAILING STUDENT'S WELFARE SCHEMES FOR YOUR KIDS?
+                question22();   //  22. DID THESE SCHEMES REDUCE YOUR EXPENDITURE ON YOU KIDS EDUCATION?
+                question23();   //  23. DOES THE FAMILY EXPENDITURE INCREASE DUE TO THE PARTICULAR SCHEME
+                question24();   //  24. HOW DOES THE SCHEME HELP THE PARENTS OTHER THAN ECONOMICAL ASPECT
+                question25();   //  25. HOW DID YOU UTILIZE THE SAVED MONEY BECAUSE OF THESE SCHEMES
+                question26();   //  26. DID THE SCHEMES IMPROVE YOUR FAMILY STATUS
             }
         });
 
@@ -276,6 +316,33 @@ public class MainActivity extends AppCompatActivity {
                 ll_ii_utilization_of_the_student_welfare_schemes.setVisibility(View.GONE);
                 iv_tv_ii_utilization_of_the_student_welfare_schemes_02.setVisibility(View.GONE);
                 iv_tv_ii_utilization_of_the_student_welfare_schemes_01.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //  (ARROW)  III. SOCIO ECONOMIC GROWTH OF FAMILY
+        iv_tv_iii_socio_economic_growth_of_family_01 = findViewById(R.id.iv_tv_iii_socio_economic_growth_of_family_01);
+        iv_tv_iii_socio_economic_growth_of_family_02 = findViewById(R.id.iv_tv_iii_socio_economic_growth_of_family_02);
+
+        iv_tv_iii_socio_economic_growth_of_family_01.setImageResource(R.drawable.ic_arrow_drop_down_black_24dp);
+        iv_tv_iii_socio_economic_growth_of_family_01.setVisibility(View.VISIBLE);
+        iv_tv_iii_socio_economic_growth_of_family_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_iii_socio_economic_growth_of_family = findViewById(R.id.ll_iii_socio_economic_growth_of_family);
+                ll_iii_socio_economic_growth_of_family.setVisibility(View.VISIBLE);
+                iv_tv_iii_socio_economic_growth_of_family_01.setVisibility(View.GONE);
+                iv_tv_iii_socio_economic_growth_of_family_02.setVisibility(View.VISIBLE);
+            }
+        });
+
+        iv_tv_iii_socio_economic_growth_of_family_02.setImageResource(R.drawable.ic_arrow_drop_up_black_24dp);
+        iv_tv_iii_socio_economic_growth_of_family_02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_iii_socio_economic_growth_of_family = findViewById(R.id.ll_iii_socio_economic_growth_of_family);
+                ll_iii_socio_economic_growth_of_family.setVisibility(View.GONE);
+                iv_tv_iii_socio_economic_growth_of_family_02.setVisibility(View.GONE);
+                iv_tv_iii_socio_economic_growth_of_family_01.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -1693,6 +1760,142 @@ public class MainActivity extends AppCompatActivity {
             databaseReference.child(tv_question20_StringEncode).child("Mention it").setValue("");
         } else {
             databaseReference.child(tv_question20_StringEncode).child("Mention it").setValue(et_answer20_mi_String);
+        }
+    }
+
+    //  III. SOCIO ECONOMIC GROWTH OF FAMILY
+    void question21() {
+        tv_question21 = findViewById(R.id.tv_question21);
+        tv_question21_StringEncode = EncodeString(tv_question21.getText().toString());
+
+        //  YES (or) NO
+        rg_21 = findViewById(R.id.rg_21);
+        if (rg_21.getCheckedRadioButtonId() != -1) {
+            int selectedId21 = rg_21.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId21);
+            rb_answer21_String = radioButton.getText().toString();
+            databaseReference.child(tv_question21_StringEncode).child("Yes (or) No").setValue(rb_answer21_String);
+        } else {
+            databaseReference.child(tv_question21_StringEncode).child("Yes (or) No").setValue("");
+        }
+
+        //  MENTION HOW?
+        et_answer21_mh = findViewById(R.id.et_answer21_mh);
+        et_answer21_mh_String = et_answer21_mh.getText().toString();
+        if (et_answer21_mh_String.isEmpty()) {
+            databaseReference.child(tv_question21_StringEncode).child("Mention how?").setValue("");
+        } else {
+            databaseReference.child(tv_question21_StringEncode).child("Mention how?").setValue(et_answer21_mh_String);
+        }
+
+        //  WHY?
+        et_answer21_why = findViewById(R.id.et_answer21_why);
+        et_answer21_why_String = et_answer21_why.getText().toString();
+        if (et_answer21_why_String.isEmpty()) {
+            databaseReference.child(tv_question21_StringEncode).child("Why?").setValue("");
+        } else {
+            databaseReference.child(tv_question21_StringEncode).child("Why?").setValue(et_answer21_why_String);
+        }
+    }
+
+    void question22() {
+        tv_question22 = findViewById(R.id.tv_question22);
+        tv_question22_StringEncode = EncodeString(tv_question22.getText().toString());
+
+        //  HOW MUCH ARE YOU SAVING PER YEAR?
+        et_answer22_hm = findViewById(R.id.et_answer22_hm);
+        et_answer22_hm_String = et_answer22_hm.getText().toString();
+        if (et_answer22_hm_String.isEmpty()) {
+            databaseReference.child(tv_question22_StringEncode).child("How much are you saving per year?").setValue("");
+        } else {
+            databaseReference.child(tv_question22_StringEncode).child("How much are you saving per year?").setValue(et_answer22_hm_String);
+        }
+
+        //  WHY?
+        et_answer22_why = findViewById(R.id.et_answer22_why);
+        et_answer22_why_String = et_answer22_why.getText().toString();
+        if (et_answer22_why_String.isEmpty()) {
+            databaseReference.child(tv_question22_StringEncode).child("Why?").setValue("");
+        } else {
+            databaseReference.child(tv_question22_StringEncode).child("Why?").setValue(et_answer22_why_String);
+        }
+    }
+
+    void question23() {
+        tv_question23 = findViewById(R.id.tv_question23);
+        tv_question23_StringEncode = EncodeString(tv_question23.getText().toString());
+
+        //  YES (or) NO
+        rg_23 = findViewById(R.id.rg_23);
+        if (rg_23.getCheckedRadioButtonId() != -1) {
+            int selectedId23 = rg_23.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId23);
+            rb_answer23_String = radioButton.getText().toString();
+            databaseReference.child(tv_question23_StringEncode).child("Yes (or) No").setValue(rb_answer23_String);
+        } else {
+            databaseReference.child(tv_question23_StringEncode).child("Yes (or) No").setValue("");
+        }
+    }
+
+    void question24() {
+        tv_question24 = findViewById(R.id.tv_question24);
+        tv_question24_StringEncode = EncodeString(tv_question24.getText().toString());
+
+        //
+        et_answer24 = findViewById(R.id.et_answer24);
+        et_answer24_String = et_answer24.getText().toString();
+        if (et_answer24_String.isEmpty()) {
+            databaseReference.child(tv_question24_StringEncode).setValue("");
+        } else {
+            databaseReference.child(tv_question24_StringEncode).setValue(et_answer24_String);
+        }
+    }
+
+    void question25() {
+        tv_question25 = findViewById(R.id.tv_question25);
+        tv_question25_StringEncode = EncodeString(tv_question25.getText().toString());
+
+        //
+        et_answer25 = findViewById(R.id.et_answer25);
+        et_answer25_String = et_answer25.getText().toString();
+        if (et_answer25_String.isEmpty()) {
+            databaseReference.child(tv_question25_StringEncode).setValue("");
+        } else {
+            databaseReference.child(tv_question25_StringEncode).setValue(et_answer25_String);
+        }
+    }
+
+    void question26() {
+        tv_question26 = findViewById(R.id.tv_question26);
+        tv_question26_StringEncode = EncodeString(tv_question26.getText().toString());
+
+        //  YES (or) NO
+        rg_26 = findViewById(R.id.rg_26);
+        if (rg_26.getCheckedRadioButtonId() != -1) {
+            int selectedId26 = rg_26.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId26);
+            rb_answer26_String = radioButton.getText().toString();
+            databaseReference.child(tv_question26_StringEncode).child("Yes (or) No").setValue(rb_answer26_String);
+        } else {
+            databaseReference.child(tv_question26_StringEncode).child("Yes (or) No").setValue("");
+        }
+
+        //  HOW?
+        et_answer26_how = findViewById(R.id.et_answer26_how);
+        et_answer26_how_String = et_answer26_how.getText().toString();
+        if (et_answer26_how_String.isEmpty()) {
+            databaseReference.child(tv_question26_StringEncode).child("How?").setValue("");
+        } else {
+            databaseReference.child(tv_question26_StringEncode).child("How?").setValue(et_answer26_how_String);
+        }
+
+        //  WHY?
+        et_answer26_why = findViewById(R.id.et_answer26_why);
+        et_answer26_why_String = et_answer26_why.getText().toString();
+        if (et_answer26_why_String.isEmpty()) {
+            databaseReference.child(tv_question26_StringEncode).child("Why?").setValue("");
+        } else {
+            databaseReference.child(tv_question26_StringEncode).child("Why?").setValue(et_answer26_why_String);
         }
     }
 

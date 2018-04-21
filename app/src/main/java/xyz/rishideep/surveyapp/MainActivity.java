@@ -18,12 +18,14 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     String android_id;
-    Button bt_submit;
+    Button bt_submit, bt_clearall;
     RadioButton radioButton;
     LinearLayout linearLayout;
 
@@ -213,9 +215,9 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("HardwareIds")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(final Bundle savedInstanceState) {
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -224,19 +226,16 @@ public class MainActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
-        et_answer1 = findViewById(R.id.et_answer1);
 
         bt_submit = findViewById(R.id.bt_submit);
         bt_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et_answer1_String = et_answer1.getText().toString();
-                databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " (" + android_id + ")").child(et_answer1_String);
+                Random r = new Random(System.currentTimeMillis());
+                int rand = ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+                String srand = Integer.toString(rand);
+                databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " (" + android_id + ")").child(srand);
                 databaseReference.keepSynced(true);
-                if (et_answer1_String.isEmpty() || et_answer1_String.length() == 0 || et_answer1_String.equals("") || et_answer1_String == null) {
-                    databaseReference = firebaseDatabase.getReference(android.os.Build.MODEL + " (" + android_id + ")").push();
-                    databaseReference.keepSynced(true);
-                }
 
                 //  meth. for QUESTIONS
                 question01();   //  01. NAME OF THE STUDENT
@@ -266,8 +265,6 @@ public class MainActivity extends AppCompatActivity {
                 question25();   //  25. HOW DID YOU UTILIZE THE SAVED MONEY BECAUSE OF THESE SCHEMES
                 question26();   //  26. DID THE SCHEMES IMPROVE YOUR FAMILY STATUS
 
-                bt_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                bt_submit.setText(getString(R.string.submitted));
                 linearLayout = findViewById(R.id.ll_item);
                 Snackbar.make(linearLayout, "All the data has been successfully saved!", Snackbar.LENGTH_LONG).show();
             }

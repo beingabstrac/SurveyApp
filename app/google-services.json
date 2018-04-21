@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1085095112695",
-    "firebase_url": "https://surveyapp-bc108.firebaseio.com",
-    "project_id": "surveyapp-bc108",
-    "storage_bucket": "surveyapp-bc108.appspot.com"
+    "project_number": "669505796542",
+    "firebase_url": "https://survey-app-5e943.firebaseio.com",
+    "project_id": "survey-app-5e943",
+    "storage_bucket": "survey-app-5e943.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1085095112695:android:635edba1109e76df",
+        "mobilesdk_app_id": "1:669505796542:android:635edba1109e76df",
         "android_client_info": {
           "package_name": "xyz.rishideep.surveyapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1085095112695-oo3ssrai9kqp5s2oe7n1mbet6vushhdm.apps.googleusercontent.com",
+          "client_id": "669505796542-ml2doosg4de78sld5m1tcqtp9jjr7rhf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB_p0nQerpzN7CTsYiAJCjvISqyiMfMgTo"
+          "current_key": "AIzaSyCcXZ5MzwAG8Tp2kxEY1TdRz8mfU4H8IdQ"
         }
       ],
       "services": {
